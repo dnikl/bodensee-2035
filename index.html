@@ -3,64 +3,135 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bodensee 2035 – Testseite</title>
-    <style>
-      :root {
-        color-scheme: light;
-        font-family: Arial, Helvetica, sans-serif;
-        color: #082446;
-        background: #f6fbfc;
-      }
-
-      * { box-sizing: border-box; }
-
-      body {
-        min-height: 100vh;
-        margin: 0;
-        display: grid;
-        place-items: center;
-        padding: 24px;
-      }
-
-      main {
-        width: min(680px, 100%);
-        padding: 56px 40px;
-        text-align: center;
-        background: white;
-        border: 1px solid #d7ebef;
-        border-radius: 20px;
-        box-shadow: 0 16px 48px rgba(8, 36, 70, 0.08);
-      }
-
-      .eyebrow {
-        margin: 0 0 16px;
-        color: #119ac6;
-        font-size: 13px;
-        font-weight: 700;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-      }
-
-      h1 {
-        margin: 0;
-        font-size: clamp(40px, 8vw, 70px);
-        line-height: 1;
-        font-weight: 700;
-      }
-
-      p:last-child {
-        margin: 24px 0 0;
-        color: #496579;
-        font-size: 18px;
-        line-height: 1.6;
-      }
-    </style>
+    <meta name="description" content="Bodensee 2035 – gemeinsam für ein grenzüberschreitendes, erneuerbares Ladenetz für Elektroboote." />
+    <title>Bodensee 2035 | Elektrifizierung</title>
+    <link rel="icon" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <main>
-      <p class="eyebrow">Verbindungstest erfolgreich</p>
-      <h1>Bodensee 2035</h1>
-      <p>Diese einfache HTML-Testseite wurde erfolgreich aus dem GitHub-Repository veröffentlicht.</p>
+      <header class="nav-wrap">
+        <nav class="nav" aria-label="Hauptnavigation">
+          <a class="brand header-brand" href="#top">
+            <img class="header-logo-mark" src="assets/icons/energy-hub-circle.svg" alt="" />
+            <span class="header-brand-copy"><strong>Bodensee 2035</strong><small>Elektrifizierung</small></span>
+          </a>
+          <div class="nav-links"><a href="#idee">Die Idee</a><a href="#weg">Unser Weg</a><a href="#vision">Vision</a></div>
+          <a class="button button-small header-cta" href="#mitgestalten"><img src="assets/icons/community.svg" alt="" />Mitgestalten</a>
+        </nav>
+      </header>
+
+      <section class="hero" id="top">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="kicker hero-kicker"><span></span> eine Initiative im Aufbau</p>
+            <h1>Der Bodensee<br />wird <em>elektrisch.</em></h1>
+            <p class="hero-claim">Nicht irgendwann. Sondern jetzt.</p>
+            <p class="hero-lead">Die Elektrifizierung ist der erste Schritt auf dem Weg zu Bodensee 2035. Gemeinsam entsteht ein grenzüberschreitendes Ladenetz für Elektroboote – erneuerbar, intelligent und offen für alle.</p>
+            <div class="actions"><a class="hero-link" href="#mitgestalten">Mitgestalten</a><a class="hero-link" href="#idee">Mehr erfahren</a></div>
+            <div class="country-row"><span>CH</span><i></i><span>DE</span><i></i><span>AT</span><i></i><span>FL</span><b>4 Länder. 1 gemeinsame Bodenseeregion.</b></div>
+          </div>
+          <div class="lake-art hero-photo"><img src="assets/bodensee-elektroboot.png" alt="Elektroboot an einer Ladesäule vor der Bergkulisse des Bodensees" /></div>
+        </div>
+        <div class="hero-facts container">
+          <div><strong>15</strong><span>angestrebte Standorte</span></div>
+          <div><strong>4</strong><span>Länder verbunden</span></div>
+          <div><strong>1</strong><span>gemeinsames Netz</span></div>
+          <p class="hero-message">Heute beginnen.<br />Gemeinsam weiterdenken.</p>
+        </div>
+      </section>
+
+      <section class="section intro" id="idee">
+        <div class="container split">
+          <div><p class="kicker"><span></span> Die Idee</p><h2>Mehr als<br />Ladepunkte.</h2><p class="side-note">Der Anfang einer neuen Mobilität auf dem Wasser.</p></div>
+          <div class="big-copy">
+            <p>Elektroboote sind bereit für den Bodensee. Was fehlt, ist ein Netz, das sie verbindet.</p>
+            <p>Ein Hafen kann mehr sein als ein Ladeort. Er kann zum Energie-Hub werden – einem Ort, an dem erneuerbare Energie intelligent erzeugt, gespeichert, genutzt und künftig auch bidirektional verfügbar gemacht wird.</p>
+            <blockquote>„Wir schaffen die Plattform.<br />Die besten Ideen bringen Sie mit.“</blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section class="section network" id="vision">
+        <div class="container">
+          <p class="kicker light"><span></span> Das vernetzte System</p>
+          <div class="network-head"><h2>Vom Hafen zum<br /><em>Energie-Hub.</em></h2><p>Der Hafen wird zum Ausgangspunkt eines intelligenten Energiesystems – für Mobilität, Gemeinden und die gesamte Bodenseeregion.</p></div>
+          <figure class="hub-scene">
+            <img src="assets/energie-hub.png" alt="Energie-Hub mit Solarenergie, Batteriespeicher, lokalem Netz, E-Mobilität, Elektrobooten und Wärmepumpe" />
+            <figcaption class="hub-benefits">
+              <span><img src="assets/icons/leaf.svg" alt="" /><span><b>Nachhaltig</b><small>für Mensch und Natur</small></span></span>
+              <span><img src="assets/icons/renewable-energy.svg" alt="" /><span><b>Erneuerbar</b><small>Energie aus der Region</small></span></span>
+              <span><img src="assets/icons/emissions-free.svg" alt="" /><span><b>Vernetzt</b><small>intelligent verbunden</small></span></span>
+              <span><img src="assets/icons/community.svg" alt="" /><span><b>Offen</b><small>für alle, die mitgestalten</small></span></span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section process" id="weg">
+        <div class="container">
+          <p class="kicker"><span></span> Unser Weg</p>
+          <div class="section-title"><h2>Wie aus Ideen<br />Wirklichkeit wird.</h2><p>Neue Ideen entstehen dort, wo Menschen ihre Erfahrungen teilen. Wir schaffen den Raum, damit daraus konkrete Lösungen werden.</p></div>
+          <div class="steps">
+            <article><div class="step-icon"><img src="assets/icons/survey-circle.svg" alt="" /></div><h3>Bedarf verstehen</h3><p>Gemeinden, Häfen, Unternehmen und die Bevölkerung bringen ihre Erfahrungen und Bedürfnisse ein.</p></article>
+            <article><div class="step-icon"><img src="assets/icons/local-grid-circle.svg" alt="" /></div><h3>Standorte verbinden</h3><p>Aus einzelnen Standorten entsteht Schritt für Schritt ein grenzüberschreitendes Netz.</p></article>
+            <article><div class="step-icon"><img src="assets/icons/community-circle.svg" alt="" /></div><h3>Pilotprojekte realisieren</h3><p>Pilotstandorte schaffen die Grundlage für den Ausbau weiterer Standorte.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section participate" id="mitgestalten">
+        <div class="container">
+          <p class="kicker"><span></span> Mitgestalten</p>
+          <div class="section-title"><h2>Was braucht der Bodensee<br />von morgen?</h2><p>Ob auf dem Wasser, im Hafen, in der Gemeinde oder im Unternehmen: Wählen Sie die Gruppe, die zu Ihnen passt, und sagen Sie uns, was aus Ihrer Sicht jetzt wichtig ist.</p></div>
+          <div class="audience-grid">
+            <button type="button" data-survey="gemeinde"><span class="audience-icon"><img src="assets/icons/municipality.svg" alt="" /></span><h3>Gemeinde oder Hafen</h3><p>Standortpotenziale prüfen und regionale Entwicklung anstossen.</p><b>Mitmachen</b></button>
+            <button type="button" data-survey="werft"><span class="audience-icon"><img src="assets/icons/shipyard.svg" alt="" /></span><h3>Werft oder Unternehmen</h3><p>Fachwissen, Technik und Ressourcen in das Netzwerk einbringen.</p><b>Mitmachen</b></button>
+            <button type="button" data-survey="boot"><span class="audience-icon"><img src="assets/icons/electric-boat.svg" alt="" /></span><h3>Bootsbesitzer:in</h3><p>Bedürfnisse und Erwartungen an ein künftiges Ladenetz teilen.</p><b>Mitmachen</b></button>
+            <button type="button" data-survey="fan"><span class="audience-icon"><img src="assets/icons/lake-region.svg" alt="" /></span><h3>Bodensee-Fan</h3><p>Mit Ihren Ideen zur Zukunft des Bodensees beitragen</p><b>Mitmachen</b></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section form-section" id="interesse" hidden>
+        <div class="container form-wrap">
+          <div class="form-intro">
+            <p class="kicker"><span></span> Ihre Perspektive</p>
+            <h2 id="survey-title"></h2>
+            <p id="survey-intro"></p>
+            <p class="duration">Dauer: ungefähr 3–5 Minuten</p>
+            <button class="change" id="change-survey" type="button">← Andere Gruppe wählen</button>
+          </div>
+          <form id="survey-form" novalidate>
+            <div id="survey-fields"></div>
+            <fieldset class="survey-block contact-block">
+              <legend><span id="contact-number"></span>Kontakt – freiwillig</legend>
+              <p>Nur ausfüllen, wenn wir Sie kontaktieren oder über den Projektverlauf informieren dürfen.</p>
+              <div class="field-row"><label>Name / Organisation<input name="name" /></label><label>Ort<input name="ort" /></label></div>
+              <div class="field-row"><label>E-Mail-Adresse<input type="email" name="email" /></label><label>Telefon<input type="tel" name="telefon" /></label></div>
+            </fieldset>
+            <label class="consent"><input required type="checkbox" name="einwilligung" /> Ich habe den Hinweis zur Datenverarbeitung gelesen und bin mit der Übermittlung dieser Angaben einverstanden.</label>
+            <button class="button submit" type="submit">Rückmeldung senden</button>
+            <p class="success" id="survey-status" role="status" hidden>Die Formularansicht funktioniert. Die dauerhafte Übermittlung wird im nächsten Schritt eingerichtet.</p>
+          </form>
+        </div>
+      </section>
+
+      <section class="closing closing-image" aria-label="Vision für einen nachhaltig vernetzten Bodensee">
+        <img src="assets/schlussbild-ohne-button.png" alt="Vision eines nachhaltig vernetzten Bodensees mit erneuerbarer Energie, Elektromobilität und Energie-Hubs" />
+        <a class="closing-image-button" href="#mitgestalten">Mitgestalten</a>
+      </section>
+
+      <footer>
+        <div class="container footer-grid">
+          <a class="brand" href="#top"><img class="footer-logo-mark" src="assets/icons/energy-hub-circle.svg" alt="" /><span>Elektrifizierung<br />Bodensee</span></a>
+          <p><strong>Eine Initiative für einen nachhaltigen und vernetzten Bodensee.</strong></p>
+          <div><b>Navigation</b><a href="#idee">Die Idee</a><a href="#weg">Unser Weg</a><a href="#mitgestalten">Mitgestalten</a></div>
+          <div><b>Kontakt</b><a href="mailto:info@elektrifizierung-bodensee.ch">E-Mail schreiben</a><span>Schweiz · Deutschland · Österreich · Liechtenstein</span></div>
+        </div>
+        <div class="container footer-bottom"><span>© 2026 Initiative Elektrifizierung Bodensee</span><span>Impressum · Datenschutz</span></div>
+      </footer>
     </main>
   </body>
 </html>
