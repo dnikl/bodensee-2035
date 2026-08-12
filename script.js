@@ -96,6 +96,7 @@ const contactNameLabel = document.querySelector("#contact-name-label");
 const pilotContactHint = document.querySelector("#pilot-contact-hint");
 const status = document.querySelector("#survey-status");
 let activeSurvey = null;
+let surveyTrigger = null;
 let pilotContactRequested = false;
 
 function fieldName(group, index, label = "antwort") {
@@ -383,8 +384,9 @@ function renderMunicipalityFollowUp(answer) {
   reference.insertAdjacentElement("afterend", block);
 }
 
-function showSurvey(group) {
+function showSurvey(group, trigger = null) {
   activeSurvey = group;
+  surveyTrigger = trigger;
   pilotContactRequested = false;
   pilotContactHint.hidden = true;
   const survey = surveys[group];
@@ -406,11 +408,14 @@ function showSurvey(group) {
   });
 
   formSection.hidden = false;
-  requestAnimationFrame(() => formSection.scrollIntoView({ behavior: "smooth", block: "start" }));
+  requestAnimationFrame(() => {
+    formSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    title.focus({ preventScroll: true });
+  });
 }
 
 document.querySelectorAll("[data-survey]").forEach((button) => {
-  button.addEventListener("click", () => showSurvey(button.dataset.survey));
+  button.addEventListener("click", () => showSurvey(button.dataset.survey, button));
 });
 
 form.querySelectorAll(".contact-box input").forEach((input) => {
@@ -420,6 +425,7 @@ form.querySelectorAll(".contact-box input").forEach((input) => {
 changeSurvey.addEventListener("click", () => {
   formSection.hidden = true;
   document.querySelector("#mitgestalten").scrollIntoView({ behavior: "smooth" });
+  surveyTrigger?.focus({ preventScroll: true });
 });
 
 form.addEventListener("submit", (event) => {

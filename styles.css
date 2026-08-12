@@ -13,6 +13,12 @@ html { scroll-snap-type: y proximity; scroll-behavior: smooth; }
 
 @media (prefers-reduced-motion:reduce) {
   html { scroll-behavior: auto; }
+  *,*::before,*::after { scroll-behavior:auto!important; animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; }
+}
+
+:where(a,button,input,textarea,select):focus-visible {
+  outline:3px solid #17a9bd;
+  outline-offset:3px;
 }
 
 .closing.closing-image.snap-section { scroll-margin-top:0; }
@@ -308,7 +314,7 @@ body,.button,input,textarea,select{font-family:Poppins,Arial,sans-serif}.hero h1
   gap:72px;
   align-items:start;
 }
-.people-behind-copy h3 {
+.people-behind-copy h2 {
   max-width:520px;
   margin:0;
   color:var(--ink);
@@ -361,7 +367,7 @@ body,.button,input,textarea,select{font-family:Poppins,Arial,sans-serif}.hero h1
   .status-timeline-closing { margin-top:38px; }
   .people-behind { margin-top:72px; }
   .people-behind-grid { grid-template-columns:1fr; gap:42px; }
-  .people-behind-copy h3 { font-size:36px; }
+  .people-behind-copy h2 { font-size:36px; }
   .people-portraits { grid-template-columns:1fr; gap:38px; }
   .people-portraits img { aspect-ratio:4/3; }
   .people-behind-closing { margin-top:30px; font-size:16px; }
@@ -1159,3 +1165,6 @@ body,.button,input,textarea,select{font-family:Poppins,Arial,sans-serif}.hero h1
   .footer-grid > div:last-child span { white-space:nowrap; }
   .footer-bottom { padding:11px 0 17px; }
 }
+
+/* Prevent decorative, absolutely positioned artwork from creating horizontal scroll. */
+body { overflow-x:hidden; }
