@@ -73,7 +73,7 @@ body,.button,input,textarea,select{font-family:Poppins,Arial,sans-serif}.hero h1
   right: 0;
   bottom: 0;
   height: 42px;
-  background: url('assets/header-wave-reference.png') center 30.5% / 100% auto no-repeat;
+  background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 42' preserveAspectRatio='none'%3E%3Cpath d='M0 24 C36 38 72 10 108 24 S180 38 216 24 S288 10 324 24 S396 38 432 24 S504 10 540 24 S612 38 648 24 S720 10 756 24 S828 38 864 24 S936 10 972 24 S1044 38 1080 24 S1152 10 1200 24' fill='none' stroke='%2311a9c6' stroke-width='1.25' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
   pointer-events: none;
 }
 .nav {
