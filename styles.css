@@ -1145,13 +1145,17 @@ body,.button,input,textarea,select{font-family:Poppins,Arial,sans-serif}.hero h1
 /* Letzter Desktop-Feinschliff: ruhiger, aber etwas kompakter. */
 @media (min-width:901px) {
   .hero .country-row { transform:translateY(-14px); }
+  .status-timeline { margin-top:46px; }
+  .status-timeline-list li { padding-top:112px; }
   .process { padding-block:81px 72px; }
   .current-status { padding:70px 0; }
   .current-status .people-behind { margin-top:63px; }
   .participate { padding-block:92px 88px; }
 
+  .footer-grid { grid-template-columns:1fr 1.15fr .6fr 1.25fr; }
   .footer-grid { padding:40px 0 12px; }
   .footer-grid > div { gap:7px; line-height:1.35; }
   .footer-grid > div b { margin-bottom:5px; }
+  .footer-grid > div:last-child span { white-space:nowrap; }
   .footer-bottom { padding:11px 0 17px; }
 }
