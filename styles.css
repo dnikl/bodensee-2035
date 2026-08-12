@@ -78,7 +78,7 @@ body,.button,input,textarea,select{font-family:Poppins,Arial,sans-serif}.hero h1
   height: 146px;
   overflow: hidden;
   background: rgba(255,255,255,.97);
-  box-shadow: 0 1px 0 rgba(11,36,70,.05);
+  box-shadow: none;
 }
 .nav-wrap::after {
   content: "";
@@ -539,8 +539,8 @@ body,.button,input,textarea,select{font-family:Poppins,Arial,sans-serif}.hero h1
   filter: brightness(0) invert(1) drop-shadow(0 0 .8px #fff);
   opacity: 1;
 }
-.hub-benefits b { color:#fff; font-size:13px; text-transform:uppercase; }
-.hub-benefits small { color:#c9edf3; font-size:12px; line-height:1.45; }
+.hub-benefits b { color:#fff; font-size:13px; text-transform:none; font-weight:600; }
+.hub-benefits small { color:#c9edf3; font-size:12px; line-height:1.45; font-weight:400; }
 .hub-explanation {
   width:84%;
   margin:40px 0 0;
@@ -1144,6 +1144,7 @@ body,.button,input,textarea,select{font-family:Poppins,Arial,sans-serif}.hero h1
 
 /* Letzter Desktop-Feinschliff: ruhiger, aber etwas kompakter. */
 @media (min-width:901px) {
+  .hero .country-row { transform:translateY(-14px); }
   .process { padding-block:81px 72px; }
   .current-status { padding:70px 0; }
   .current-status .people-behind { margin-top:63px; }
