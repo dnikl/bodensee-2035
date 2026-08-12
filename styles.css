@@ -1149,7 +1149,7 @@ body,.button,input,textarea,select{font-family:Poppins,Arial,sans-serif}.hero h1
   .status-timeline-list li { padding-top:112px; }
   .process { padding-block:81px 72px; }
   .current-status { padding:70px 0; }
-  .current-status .people-behind { margin-top:63px; }
+  .current-status .people-behind { margin-top:85px; }
   .participate { padding-block:92px 88px; }
 
   .footer-grid { grid-template-columns:1fr 1.15fr .6fr 1.25fr; }
