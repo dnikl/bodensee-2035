@@ -102,6 +102,8 @@ const contactNumber = document.querySelector("#contact-number");
 const contactNameLabel = document.querySelector("#contact-name-label");
 const pilotContactHint = document.querySelector("#pilot-contact-hint");
 const status = document.querySelector("#survey-status");
+const consent = form.querySelector('[name="datenschutz-einwilligung"]');
+const consentError = document.querySelector("#consent-error");
 let activeSurvey = null;
 let surveyTrigger = null;
 let pilotContactRequested = false;
@@ -415,6 +417,8 @@ function showSurvey(group, trigger = null) {
   contactNameLabel.textContent = ["boot", "fan"].includes(group) ? "Name" : "Name / Organisation";
   contactNumber.textContent = String(survey.sections.length + 1).padStart(2, "0");
   status.hidden = true;
+  consentError.hidden = true;
+  consent.removeAttribute("aria-invalid");
   form.reset();
 
   survey.sections.forEach((section, index) => {
@@ -435,6 +439,12 @@ document.querySelectorAll("[data-survey]").forEach((button) => {
 
 form.querySelectorAll(".contact-box input").forEach((input) => {
   input.addEventListener("input", updatePilotContactHint);
+});
+
+consent.addEventListener("change", () => {
+  if (!consent.checked) return;
+  consentError.hidden = true;
+  consent.removeAttribute("aria-invalid");
 });
 
 changeSurvey.addEventListener("click", () => {
@@ -460,6 +470,14 @@ function formsparkPayload() {
 
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
+  if (!consent.checked) {
+    consentError.hidden = false;
+    consent.setAttribute("aria-invalid", "true");
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    consent.closest(".consent").scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "center" });
+    consent.focus({ preventScroll: true });
+    return;
+  }
   if (!form.reportValidity()) return;
 
   const endpoint = formsparkEndpoints[activeSurvey];

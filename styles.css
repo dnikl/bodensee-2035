@@ -1179,6 +1179,44 @@ body { overflow-x:hidden; }
   overflow:hidden!important;
 }
 
+.consent-error {
+  margin:-10px 0 18px;
+  color:#9b3f47;
+  font-size:12px;
+  font-weight:600;
+  line-height:1.55;
+}
+.consent:has(input[aria-invalid="true"]) { background:#fff3f3; }
+
+.scroll-top {
+  position:fixed;
+  z-index:50;
+  right:clamp(18px,2.5vw,38px);
+  bottom:clamp(18px,2.5vw,34px);
+  border:1px solid rgba(17,169,198,.42);
+  border-radius:999px;
+  background:rgba(255,255,255,.94);
+  color:var(--ink);
+  padding:10px 15px;
+  font:600 12px/1 Poppins,Arial,sans-serif;
+  box-shadow:0 8px 24px rgba(11,36,70,.10);
+  cursor:pointer;
+  opacity:0;
+  transform:translateY(8px);
+  pointer-events:none;
+  transition:opacity 200ms ease,transform 200ms ease,background-color 200ms ease,border-color 200ms ease;
+}
+.scroll-top.is-visible { opacity:1; transform:none; pointer-events:auto; }
+.scroll-top:hover { background:#eef9fb; border-color:var(--green); }
+
+@media(max-width:620px) {
+  .scroll-top { right:14px; bottom:14px; padding:9px 12px; font-size:11px; }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .scroll-top { transition:none; }
+}
+
 /* Ruhige Rechteseiten im bestehenden Bodensee-2035-Design. */
 .legal-body .nav-wrap { position:relative; }
 .legal-main { background:#f6f8fa; }
