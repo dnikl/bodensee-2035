@@ -1212,6 +1212,7 @@ body { overflow-x:hidden; }
   transition:opacity 200ms ease,transform 200ms ease,background-color 200ms ease,border-color 200ms ease;
 }
 .scroll-top.is-visible { opacity:1; transform:none; pointer-events:auto; }
+.scroll-top.is-over-footer { bottom:max(78px,calc(env(safe-area-inset-bottom) + 64px)); }
 .scroll-top:hover { background:transparent; }
 .scroll-top-mark {
   position:absolute;

@@ -2,9 +2,8 @@ const scrollTopButton = document.querySelector(".scroll-top");
 
 if (scrollTopButton) {
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-  let footerVisible = false;
   const updateScrollTopButton = () => {
-    const visible = window.scrollY > Math.max(500, window.innerHeight * 0.75) && !footerVisible;
+    const visible = window.scrollY > Math.max(500, window.innerHeight * 0.75);
     scrollTopButton.hidden = false;
     scrollTopButton.classList.toggle("is-visible", visible);
     scrollTopButton.setAttribute("aria-hidden", String(!visible));
@@ -19,7 +18,7 @@ if (scrollTopButton) {
   const footer = document.querySelector("footer");
   if (footer && "IntersectionObserver" in window) {
     new IntersectionObserver(([entry]) => {
-      footerVisible = entry.isIntersecting;
+      scrollTopButton.classList.toggle("is-over-footer", entry.isIntersecting);
       updateScrollTopButton();
     }).observe(footer);
   }
