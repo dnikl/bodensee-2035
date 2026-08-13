@@ -1232,6 +1232,16 @@ body { overflow-x:hidden; }
   stroke-linejoin:round;
   vector-effect:non-scaling-stroke;
 }
+.scroll-top-head-main,
+.scroll-top-head-light {
+  fill:none;
+  stroke:currentColor;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  vector-effect:non-scaling-stroke;
+}
+.scroll-top-head-main { stroke-width:2.7; }
+.scroll-top-head-light { stroke-width:1.7; }
 .scroll-top:focus-visible { outline-offset:-3px; }
 
 @media(max-width:620px) {
