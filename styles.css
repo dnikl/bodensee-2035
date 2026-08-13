@@ -1247,7 +1247,7 @@ body { overflow-x:hidden; }
 @media(max-width:620px) {
   .scroll-top {
     right:10px;
-    bottom:max(14px,env(safe-area-inset-bottom));
+    bottom:max(24px,calc(env(safe-area-inset-bottom) + 10px));
     width:48px;
     height:48px;
   }
