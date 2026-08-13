@@ -1169,3 +1169,43 @@ body,.button,input,textarea,select{font-family:Poppins,Arial,sans-serif}.hero h1
 
 /* Prevent decorative, absolutely positioned artwork from creating horizontal scroll. */
 body { overflow-x:hidden; }
+
+/* Ruhige Rechteseiten im bestehenden Bodensee-2035-Design. */
+.legal-body .nav-wrap { position:relative; }
+.legal-main { background:#f6f8fa; }
+.legal-page { padding:86px 0 110px; }
+.legal-container { width:min(820px,calc(100% - 48px)); margin:0 auto; }
+.legal-container h1 {
+  margin:0 0 58px;
+  color:var(--ink);
+  font-family:Poppins,Arial,sans-serif;
+  font-size:clamp(48px,6vw,76px);
+  font-weight:800;
+  letter-spacing:-.045em;
+  line-height:1;
+}
+.legal-section { padding:30px 0; border-top:1px solid var(--line); }
+.legal-section h2 {
+  margin:0 0 16px;
+  color:var(--ink);
+  font-family:Poppins,Arial,sans-serif;
+  font-size:20px;
+  font-weight:600;
+  letter-spacing:-.015em;
+  line-height:1.35;
+}
+.legal-section p { max-width:720px; margin:0 0 16px; color:var(--muted); font-size:15px; line-height:1.8; }
+.legal-section p:last-child { margin-bottom:0; }
+.legal-section strong { color:var(--ink); font-weight:600; }
+.legal-section a { color:var(--green); text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px; }
+.legal-section a:hover { color:var(--ink); }
+.footer-bottom a:hover { color:var(--green); }
+
+@media(max-width:620px) {
+  .legal-page { padding:62px 0 78px; }
+  .legal-container { width:min(100% - 32px,820px); }
+  .legal-container h1 { margin-bottom:42px; font-size:46px; }
+  .legal-section { padding:25px 0; }
+  .legal-section h2 { font-size:18px; }
+  .legal-section p { font-size:14px; }
+}
