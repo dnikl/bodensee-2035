@@ -1173,13 +1173,13 @@ body { overflow-x:hidden; }
 /* Ruhige Rechteseiten im bestehenden Bodensee-2035-Design. */
 .legal-body .nav-wrap { position:relative; }
 .legal-main { background:#f6f8fa; }
-.legal-page { padding:86px 0 110px; }
+.legal-page { padding:62px 0 110px; }
 .legal-container { width:min(820px,calc(100% - 48px)); margin:0 auto; }
 .legal-container h1 {
   margin:0 0 58px;
   color:var(--ink);
   font-family:Poppins,Arial,sans-serif;
-  font-size:clamp(48px,6vw,76px);
+  font-size:clamp(38px,4.8vw,61px);
   font-weight:800;
   letter-spacing:-.045em;
   line-height:1;
@@ -1202,9 +1202,9 @@ body { overflow-x:hidden; }
 .footer-bottom a:hover { color:var(--green); }
 
 @media(max-width:620px) {
-  .legal-page { padding:62px 0 78px; }
+  .legal-page { padding:46px 0 78px; }
   .legal-container { width:min(100% - 32px,820px); }
-  .legal-container h1 { margin-bottom:42px; font-size:46px; }
+  .legal-container h1 { margin-bottom:42px; font-size:37px; }
   .legal-section { padding:25px 0; }
   .legal-section h2 { font-size:18px; }
   .legal-section p { font-size:14px; }
