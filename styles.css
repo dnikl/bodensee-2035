@@ -1219,7 +1219,7 @@ body { overflow-x:hidden; }
   top:50%;
   display:block;
   width:38px;
-  height:48px;
+  height:52px;
   transform:translate(-50%,-50%);
   overflow:visible;
 }
