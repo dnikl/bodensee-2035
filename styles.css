@@ -1170,6 +1170,15 @@ body,.button,input,textarea,select{font-family:Poppins,Arial,sans-serif}.hero h1
 /* Prevent decorative, absolutely positioned artwork from creating horizontal scroll. */
 body { overflow-x:hidden; }
 
+/* Unsichtbarer Formspark-Honeypot: zugänglich für Bots, ausserhalb der sichtbaren Seite. */
+.formspark-honeypot {
+  position:absolute!important;
+  left:-10000px!important;
+  width:1px!important;
+  height:1px!important;
+  overflow:hidden!important;
+}
+
 /* Ruhige Rechteseiten im bestehenden Bodensee-2035-Design. */
 .legal-body .nav-wrap { position:relative; }
 .legal-main { background:#f6f8fa; }

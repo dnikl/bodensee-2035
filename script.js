@@ -1,5 +1,12 @@
 const commonDevelopment = ["Sehr positiv", "Eher positiv", "Neutral", "Eher kritisch", "Kritisch"];
 
+const formsparkEndpoints = Object.freeze({
+  boot: "https://submit-form.com/NrkrhoPVZ",
+  fan: "https://submit-form.com/NrkrhoPVZ",
+  werft: "https://submit-form.com/dQprUSMGE",
+  gemeinde: "https://submit-form.com/5o8Knq5mF",
+});
+
 const privateSections = [
   { title: "Ihre Verbindung zum Bodensee", type: "checks", options: ["Bootsbesitzer:in", "Wassersportler:in", "Natur- und Seeliebhaber:in", "Anwohner:in", "Mitarbeitende:r eines Hafens oder einer Marina", "Mitarbeitende:r einer Gemeinde oder Stadt", "Unternehmer:in", "Sonstiges"] },
   { title: "Welche Technologien nutzen Sie bereits oder interessieren Sie besonders?", type: "matrix", rows: ["Elektroauto", "Photovoltaikanlage", "Batteriespeicher", "Wärmepumpe", "Ladestation für Elektrofahrzeuge", "Elektromobilität auf dem Wasser", "Lokale Elektrizitätsgemeinschaft (LEG)"], labels: ["Nutze ich bereits", "Interessiert mich"] },
@@ -100,14 +107,20 @@ let surveyTrigger = null;
 let pilotContactRequested = false;
 
 function fieldName(group, index, label = "antwort") {
-  return `${group}-${index + 1}-${label}`.toLowerCase().replace(/[^a-z0-9äöüß]+/gi, "-");
+  return `${group}-${index + 1}-${label}`
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/ß/g, "ss")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
 }
 
 function optionList(section, index) {
   const wrapper = document.createElement("div");
   wrapper.className = "survey-options";
   const type = section.type === "checks" ? "checkbox" : "radio";
-  const name = fieldName(activeSurvey, index);
+  const name = fieldName(activeSurvey, index, section.question || section.title);
 
   let otherToggle = null;
   section.options.forEach((option) => {
@@ -115,7 +128,7 @@ function optionList(section, index) {
     const label = document.createElement("label");
     const input = document.createElement("input");
     input.type = type;
-    input.name = type === "checkbox" ? `${name}[]` : name;
+    input.name = name;
     input.value = optionValue;
     if (section.conditional) input.addEventListener("change", () => renderMunicipalityFollowUp(optionValue));
     if (section.boatType) input.addEventListener("change", () => renderBoatDrive(optionValue));
@@ -179,7 +192,7 @@ function matrix(section, index) {
       label.dataset.label = labelText;
       const input = document.createElement("input");
       input.type = "checkbox";
-      input.name = `${fieldName(activeSurvey, index, row)}[]`;
+      input.name = fieldName(activeSurvey, index, row);
       input.value = labelText;
       label.append(input);
       line.append(label);
@@ -390,6 +403,8 @@ function showSurvey(group, trigger = null) {
   pilotContactRequested = false;
   pilotContactHint.hidden = true;
   const survey = surveys[group];
+  form.action = formsparkEndpoints[group];
+  form.method = "post";
   formSection.dataset.survey = "gemeinde";
   formSection.dataset.surveyGroup = group;
   fields.replaceChildren();
@@ -428,9 +443,61 @@ changeSurvey.addEventListener("click", () => {
   surveyTrigger?.focus({ preventScroll: true });
 });
 
-form.addEventListener("submit", (event) => {
+function formsparkPayload() {
+  const payload = {};
+  new FormData(form).forEach((value, name) => {
+    if (!(name in payload)) {
+      payload[name] = value;
+    } else if (Array.isArray(payload[name])) {
+      payload[name].push(value);
+    } else {
+      payload[name] = [payload[name], value];
+    }
+  });
+  payload.fragebogen = surveys[activeSurvey].title;
+  return payload;
+}
+
+form.addEventListener("submit", async (event) => {
   event.preventDefault();
   if (!form.reportValidity()) return;
-  status.hidden = false;
-  status.scrollIntoView({ behavior: "smooth", block: "nearest" });
+
+  const endpoint = formsparkEndpoints[activeSurvey];
+  if (!endpoint) return;
+
+  const submitButton = form.querySelector('button[type="submit"]');
+  const originalButtonText = submitButton.textContent;
+  submitButton.disabled = true;
+  submitButton.textContent = "Wird gesendet …";
+  status.hidden = true;
+
+  const payload = formsparkPayload();
+
+  try {
+    const response = await fetch(endpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify(payload),
+    });
+
+    if (!response.ok) throw new Error(`Formspark antwortete mit Status ${response.status}`);
+
+    form.reset();
+    fields.querySelectorAll('[data-boot-conditional], [data-follow-up="true"]').forEach((node) => node.remove());
+    pilotContactRequested = false;
+    updatePilotContactHint();
+    status.textContent = "Vielen Dank. Ihre Rückmeldung wurde erfolgreich übermittelt.";
+    status.classList.remove("error");
+    status.hidden = false;
+    status.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  } catch (error) {
+    console.error("Die Rückmeldung konnte nicht übermittelt werden.", error);
+    status.textContent = "Die Rückmeldung konnte leider nicht übermittelt werden. Bitte versuchen Sie es später erneut. Ihre Eingaben bleiben erhalten.";
+    status.classList.add("error");
+    status.hidden = false;
+    status.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  } finally {
+    submitButton.disabled = false;
+    submitButton.textContent = originalButtonText;
+  }
 });

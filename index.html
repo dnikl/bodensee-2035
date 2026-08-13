@@ -7,8 +7,8 @@
     <title>Bodensee 2035 | Elektrifizierung</title>
     <link rel="canonical" href="https://bodensee-2035.com/" />
     <link rel="icon" href="assets/favicon.svg" />
-    <link rel="stylesheet" href="styles.css?v=impressum-kleiner" />
-    <script src="script.js?v=09bec77-tuev" defer></script>
+    <link rel="stylesheet" href="styles.css?v=formspark" />
+    <script src="script.js?v=formspark" defer></script>
   </head>
   <body>
     <header class="nav-wrap">
@@ -180,19 +180,20 @@
             <button class="change" id="change-survey" type="button">← Andere Gruppe wählen</button>
           </div>
           <form id="survey-form" novalidate>
+            <div class="formspark-honeypot" aria-hidden="true"><label>Bitte nicht ausfüllen<input type="text" name="_honeypot" tabindex="-1" autocomplete="off" /></label></div>
             <div id="survey-fields"></div>
             <fieldset class="survey-block contact-block">
               <legend><span id="contact-number"></span>Kontakt – freiwillig</legend>
               <div class="contact-box">
                 <p>Nur ausfüllen, wenn wir Sie kontaktieren oder über den Projektverlauf informieren dürfen.</p>
                 <p class="pilot-contact-hint" id="pilot-contact-hint" hidden>Sie interessieren sich für das Pilotprojekt?<br />Hinterlassen Sie uns gerne Ihre Kontaktdaten, damit wir Sie über die nächsten Schritte informieren können.</p>
-                <div class="field-row"><label><span id="contact-name-label">Name / Organisation</span><input name="name" /></label><label>Ort<input name="ort" /></label></div>
-                <div class="field-row"><label>E-Mail-Adresse<input type="email" name="email" /></label><label>Telefon<input type="tel" name="telefon" /></label></div>
+                <div class="field-row"><label><span id="contact-name-label">Name / Organisation</span><input name="kontakt-name" /></label><label>Ort<input name="kontakt-ort" /></label></div>
+                <div class="field-row"><label>E-Mail-Adresse<input type="email" name="kontakt-email" /></label><label>Telefon<input type="tel" name="kontakt-telefon" /></label></div>
               </div>
             </fieldset>
-            <label class="consent"><input required type="checkbox" name="einwilligung" /> Ich habe den Hinweis zur Datenverarbeitung gelesen und bin mit der Übermittlung dieser Angaben einverstanden.</label>
+            <label class="consent"><input required type="checkbox" name="datenschutz-einwilligung" value="Ja" /> Ich habe den Hinweis zur Datenverarbeitung gelesen und bin mit der Übermittlung dieser Angaben einverstanden.</label>
             <button class="button submit" type="submit">Rückmeldung senden</button>
-            <p class="success" id="survey-status" role="status" hidden>Die Formularansicht funktioniert. Die dauerhafte Übermittlung wird im nächsten Schritt eingerichtet.</p>
+            <p class="success" id="survey-status" role="status" hidden></p>
           </form>
         </div>
       </section>
