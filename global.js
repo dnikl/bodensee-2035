@@ -3,7 +3,9 @@ const scrollTopButton = document.querySelector(".scroll-top");
 if (scrollTopButton) {
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const updateScrollTopButton = () => {
-    const visible = window.scrollY > Math.max(500, window.innerHeight * 0.75);
+    const mobile = window.matchMedia("(max-width: 620px)").matches;
+    const threshold = mobile ? Math.min(260, window.innerHeight * 0.35) : Math.max(500, window.innerHeight * 0.75);
+    const visible = window.scrollY > threshold;
     scrollTopButton.hidden = false;
     scrollTopButton.classList.toggle("is-visible", visible);
     scrollTopButton.setAttribute("aria-hidden", String(!visible));
