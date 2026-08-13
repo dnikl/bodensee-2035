@@ -1251,6 +1251,8 @@ body { overflow-x:hidden; }
     width:48px;
     height:48px;
   }
+  .scroll-top-head-main { stroke-width:3; }
+  .scroll-top-head-light { stroke-width:2.1; }
 }
 
 @media(prefers-reduced-motion:reduce) {
