@@ -7,9 +7,9 @@
     <title>Bodensee 2035 | Elektrifizierung</title>
     <link rel="canonical" href="https://bodensee-2035.com/" />
     <link rel="icon" href="assets/favicon.svg" />
-    <link rel="stylesheet" href="styles.css?v=pfeil-mobile-abstand" />
+    <link rel="stylesheet" href="styles.css?v=datenschutz-schritt-1" />
     <script src="global.js?v=pfeil-mobile-frueher" defer></script>
-    <script src="script.js?v=4c317e4" defer></script>
+    <script src="script.js?v=datenschutz-schritt-1" defer></script>
   </head>
   <body>
     <header class="nav-wrap">
@@ -192,7 +192,8 @@
                 <div class="field-row"><label>E-Mail-Adresse<input type="email" name="kontakt-email" /></label><label>Telefon<input type="tel" name="kontakt-telefon" /></label></div>
               </div>
             </fieldset>
-            <label class="consent"><input required type="checkbox" name="datenschutz-einwilligung" value="Ja" aria-describedby="consent-error" /> Ich habe den Hinweis zur Datenverarbeitung gelesen und bin mit der Übermittlung dieser Angaben einverstanden.</label>
+            <label class="consent"><input required type="checkbox" name="datenschutz-einwilligung" value="Ja" aria-describedby="consent-provider-note consent-error" /> Ich habe den Hinweis zur Datenverarbeitung gelesen und bin mit der Übermittlung dieser Angaben einverstanden.</label>
+            <p class="consent-provider-note" id="consent-provider-note">Ihre Angaben werden zur Verarbeitung sicher an unseren Formulardienst Formspark übermittelt.</p>
             <p class="consent-error" id="consent-error" role="alert" hidden>Fast geschafft – bitte noch kurz den Datenschutzhinweis bestätigen.</p>
             <button class="button submit" type="submit">Rückmeldung senden</button>
             <p class="success" id="survey-status" role="status" hidden></p>
@@ -234,7 +235,7 @@
           <div><b>Navigation</b><a href="#idee">Die Idee</a><a href="#weg">Unser Weg</a><a href="#schlussvision">Vision</a><a href="#menschen">Über uns</a><a href="#mitgestalten">Mitgestalten</a></div>
           <div><b>Kontakt</b><a href="mailto:info@elektrifizierung-bodensee.ch">E-Mail schreiben</a><span>Schweiz · Deutschland · Österreich · Liechtenstein</span></div>
         </div>
-        <div class="container footer-bottom"><span>© 2026 Bodensee 2035</span><span><a href="impressum.html">Impressum</a> · Datenschutz</span></div>
+        <div class="container footer-bottom"><span>© 2026 Bodensee 2035</span><span><a href="impressum.html">Impressum</a> · <span class="footer-privacy-link">Datenschutz</span></span></div>
     </footer>
     <button class="scroll-top" type="button" aria-label="Nach oben scrollen" hidden><svg class="scroll-top-mark" viewBox="0 0 46 62" aria-hidden="true"><path class="scroll-top-line" d="M21 60 C29 52 29 44 22 38 C17 33 17 28 20.5 23" /><path class="scroll-top-head-main" d="M7.5 27 C15.4 25.3 21.3 15.5 23 4 C20.1 14.8 14.8 20.2 9.8 21.8 Z" /><path class="scroll-top-head-light" d="M23 5 C24.3 12.7 27.2 18.8 31.7 21.7" /></svg></button>
   </body>

@@ -7,6 +7,8 @@ const formsparkEndpoints = Object.freeze({
   gemeinde: "https://submit-form.com/5o8Knq5mF",
 });
 
+const privacyNoticeVersion = "2026-08-13";
+
 const privateSections = [
   { title: "Ihre Verbindung zum Bodensee", type: "checks", options: ["Bootsbesitzer:in", "Wassersportler:in", "Natur- und Seeliebhaber:in", "Anwohner:in", "Mitarbeitende:r eines Hafens oder einer Marina", "Mitarbeitende:r einer Gemeinde oder Stadt", "Unternehmer:in", "Sonstiges"] },
   { title: "Welche Technologien nutzen Sie bereits oder interessieren Sie besonders?", type: "matrix", rows: ["Elektroauto", "Photovoltaikanlage", "Batteriespeicher", "Wärmepumpe", "Ladestation für Elektrofahrzeuge", "Elektromobilität auf dem Wasser", "Lokale Elektrizitätsgemeinschaft (LEG)"], labels: ["Nutze ich bereits", "Interessiert mich"] },
@@ -465,6 +467,11 @@ function formsparkPayload() {
     }
   });
   payload.fragebogen = surveys[activeSurvey].title;
+  if (consent.checked) {
+    payload.privacy_consent = true;
+    payload.privacy_consent_timestamp = new Date().toISOString();
+    payload.privacy_notice_version = privacyNoticeVersion;
+  }
   return payload;
 }
 
