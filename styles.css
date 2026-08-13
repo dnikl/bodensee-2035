@@ -1219,15 +1219,15 @@ body { overflow-x:hidden; }
   left:50%;
   top:50%;
   display:block;
-  width:43px;
-  height:58px;
+  width:38px;
+  height:52px;
   transform:translate(-50%,-50%);
   overflow:visible;
 }
 .scroll-top-tail {
   fill:none;
   stroke:currentColor;
-  stroke-width:2;
+  stroke-width:2.25;
   stroke-linecap:round;
   stroke-linejoin:round;
   vector-effect:non-scaling-stroke;
