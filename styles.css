@@ -1224,7 +1224,12 @@ body { overflow-x:hidden; }
   transform:translate(-50%,-50%) scale(1.45);
   overflow:visible;
 }
-.scroll-top-head-main { fill:currentColor; stroke:none; }
+.scroll-top-head-main {
+  fill:currentColor;
+  stroke:none;
+  transform:scaleX(.78);
+  transform-origin:23px 5px;
+}
 .scroll-top-head-light {
   fill:none;
   stroke:currentColor;
