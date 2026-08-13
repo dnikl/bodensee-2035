@@ -1224,7 +1224,7 @@ body { overflow-x:hidden; }
   transform:translate(-50%,-50%);
   overflow:visible;
 }
-.scroll-top-tail {
+.scroll-top-line {
   fill:none;
   stroke:currentColor;
   stroke-width:2.25;
@@ -1232,7 +1232,6 @@ body { overflow-x:hidden; }
   stroke-linejoin:round;
   vector-effect:non-scaling-stroke;
 }
-.scroll-top-head { fill:currentColor; stroke:none; }
 .scroll-top:focus-visible { outline-offset:-3px; }
 
 @media(max-width:620px) {
