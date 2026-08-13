@@ -1227,24 +1227,20 @@ body { overflow-x:hidden; }
 .scroll-top-head-main {
   fill:currentColor;
   stroke:none;
-  transform:scaleX(.78);
-  transform-origin:23px 5px;
 }
 .scroll-top-head-light {
   fill:none;
   stroke:currentColor;
-  stroke-width:1.7;
+  stroke-width:1.2;
   stroke-linecap:round;
   stroke-linejoin:round;
-  vector-effect:non-scaling-stroke;
 }
 .scroll-top-line {
   fill:none;
   stroke:currentColor;
-  stroke-width:2.25;
+  stroke-width:1.55;
   stroke-linecap:round;
   stroke-linejoin:round;
-  vector-effect:non-scaling-stroke;
 }
 .scroll-top:focus-visible { outline-offset:-3px; }
 
@@ -1255,7 +1251,6 @@ body { overflow-x:hidden; }
     width:48px;
     height:48px;
   }
-  .scroll-top-head-light { stroke-width:2.1; }
 }
 
 @media(prefers-reduced-motion:reduce) {
