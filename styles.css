@@ -1305,3 +1305,33 @@ body { overflow-x:hidden; }
   .legal-section h2 { font-size:18px; }
   .legal-section p { font-size:14px; }
 }
+
+/* Reduzierte technische Bestätigungsseiten im bestehenden Design. */
+.confirmation-body { min-height:100vh; display:flex; flex-direction:column; }
+.confirmation-main { flex:1; display:flex; background:#f6f8fa; }
+.confirmation-page { width:100%; display:grid; place-items:center; padding:clamp(90px,12vh,150px) 0; }
+.confirmation-container { width:min(780px,calc(100% - 48px)); text-align:center; }
+.confirmation-kicker { justify-content:center; margin-bottom:28px; }
+.confirmation-container h1 {
+  max-width:760px;
+  margin:0 auto;
+  color:var(--ink);
+  font-family:Poppins,Arial,sans-serif;
+  font-size:clamp(44px,6vw,74px);
+  font-weight:500;
+  letter-spacing:-.045em;
+  line-height:1.08;
+}
+.confirmation-lead { max-width:650px; margin:34px auto 0; color:var(--ink); font-size:clamp(18px,2vw,22px); line-height:1.6; }
+.confirmation-note { max-width:610px; margin:18px auto 0; color:var(--muted); font-size:14px; line-height:1.75; }
+.confirmation-back { margin-top:38px; }
+
+@media(max-width:620px) {
+  .confirmation-page { padding:76px 0 88px; }
+  .confirmation-container { width:min(100% - 32px,780px); }
+  .confirmation-kicker { margin-bottom:22px; }
+  .confirmation-container h1 { font-size:40px; }
+  .confirmation-lead { margin-top:27px; font-size:18px; }
+  .confirmation-note { font-size:13px; }
+  .confirmation-back { margin-top:32px; }
+}
