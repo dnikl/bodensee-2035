@@ -1383,6 +1383,27 @@ body { overflow-x:hidden; }
 .detailed-surveys-heading { margin-top:clamp(104px,10vw,144px); }
 .participate .audience-grid { scroll-margin-top:110px; }
 
+/* Grosszuegiges Raster fuer die vier ausfuehrlichen Frageboegen. */
+.participate .audience-grid {
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:32px;
+}
+.participate .audience-grid button {
+  grid-template-rows:48px auto minmax(0,1fr) auto;
+  min-height:280px;
+  border:1px solid var(--line);
+}
+
+@media(max-width:620px) {
+  .participate .audience-grid {
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+  .participate .audience-grid button {
+    min-height:0;
+  }
+}
+
 @media(max-width:700px) {
   .quick-feedback { margin-top:0; padding:0; }
   .quick-feedback-heading { margin-bottom:24px; }
