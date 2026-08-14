@@ -7,6 +7,9 @@ const formsparkEndpoints = Object.freeze({
   gemeinde: "https://submit-form.com/5o8Knq5mF",
 });
 
+const quickFeedbackEndpoint = "https://submit-form.com/z8y8ZMxxS";
+const brevoDoubleOptInEndpoint = "https://ad54fc02.sibforms.com/serve/MUIFAN8stR-wtc1rdUDruOe3Sj9meBF1jQ2npbkm66yBZDVcXlYCh-aL5lxUAxMWqLPA6hlnSfWRJJQ5FE4qtnjK_pAlJulPlLYXgfjFOQ0abdqhpQ2a6YpWa16KGrL09iianbYp-s1FsnXOp3kBf4hMNYmXDG9Plxl8qVxpvT2mW66mH69F2h_cQT_EXsBFpLsiyJV9AqOgHnVaTg==";
+
 const privacyNoticeVersion = "2026-08-13";
 
 const privateSections = [
@@ -526,3 +529,178 @@ form.addEventListener("submit", async (event) => {
     submitButton.textContent = originalButtonText;
   }
 });
+
+const quickFeedbackForm = document.querySelector("#quick-feedback-form");
+
+if (quickFeedbackForm) {
+  const quickEmailPanel = document.querySelector("#quick-email-panel");
+  const quickEmail = document.querySelector("#quick-email");
+  const quickInterestsGroup = document.querySelector("#quick-interests-group");
+  const quickInterestsError = document.querySelector("#quick-interests-error");
+  const quickConsent = quickFeedbackForm.querySelector('[name="datenschutz-einwilligung"]');
+  const quickConsentError = document.querySelector("#quick-consent-error");
+  const quickSubmitStatus = document.querySelector("#quick-submit-status");
+  const quickSuccess = document.querySelector("#quick-feedback-success");
+  const quickHeading = document.querySelector(".quick-feedback-heading");
+
+  function updateQuickEmailPanel() {
+    const followAnswer = quickFeedbackForm.querySelector('[name="frage_3_weiterverfolgen"]:checked')?.value;
+    const wantsUpdates = followAnswer === "Ja, gerne";
+    quickEmailPanel.classList.toggle("is-visible", wantsUpdates);
+    quickEmailPanel.setAttribute("aria-hidden", String(!wantsUpdates));
+    quickEmail.disabled = !wantsUpdates;
+    quickEmail.required = wantsUpdates;
+    if (!wantsUpdates) quickEmail.value = "";
+  }
+
+  function quickFeedbackPayload() {
+    const payload = {};
+    new FormData(quickFeedbackForm).forEach((value, name) => {
+      if (name === "datenschutz-einwilligung") return;
+      if (!(name in payload)) {
+        payload[name] = value;
+      } else if (Array.isArray(payload[name])) {
+        payload[name].push(value);
+      } else {
+        payload[name] = [payload[name], value];
+      }
+    });
+    payload.fragebogen = "Bodensee 2035 – Ihre Meinung zählt";
+    payload.privacy_consent = true;
+    payload.privacy_consent_timestamp = new Date().toISOString();
+    payload.privacy_notice_version = privacyNoticeVersion;
+    return payload;
+  }
+
+  function submitBrevoDoubleOptIn(email) {
+    return new Promise((resolve, reject) => {
+      const frameName = `brevo-double-opt-in-${Date.now()}`;
+      const frame = document.createElement("iframe");
+      const brevoForm = document.createElement("form");
+      let submitted = false;
+      let settled = false;
+      const cleanup = () => {
+        window.clearTimeout(timeout);
+        brevoForm.remove();
+        frame.remove();
+      };
+      const finish = (callback) => {
+        if (settled) return;
+        settled = true;
+        cleanup();
+        callback();
+      };
+      const timeout = window.setTimeout(() => finish(() => reject(new Error("Brevo-Anfrage hat das Zeitlimit überschritten"))), 15000);
+
+      frame.name = frameName;
+      frame.hidden = true;
+      frame.setAttribute("aria-hidden", "true");
+      frame.addEventListener("load", () => {
+        if (submitted) finish(resolve);
+      });
+
+      brevoForm.method = "POST";
+      brevoForm.action = brevoDoubleOptInEndpoint;
+      brevoForm.target = frameName;
+      brevoForm.hidden = true;
+      [
+        ["EMAIL", email],
+        ["email_address_check", ""],
+        ["locale", "de"],
+      ].forEach(([name, value]) => {
+        const input = document.createElement("input");
+        input.type = "hidden";
+        input.name = name;
+        input.value = value;
+        brevoForm.append(input);
+      });
+
+      document.body.append(frame, brevoForm);
+      requestAnimationFrame(() => {
+        submitted = true;
+        brevoForm.submit();
+      });
+    });
+  }
+
+  quickFeedbackForm.querySelectorAll('[name="frage_3_weiterverfolgen"]').forEach((input) => {
+    input.addEventListener("change", updateQuickEmailPanel);
+  });
+
+  quickFeedbackForm.querySelectorAll('[name="frage_2_interessen"]').forEach((input) => {
+    input.addEventListener("change", () => {
+      if (!input.checked) return;
+      quickInterestsError.hidden = true;
+      quickInterestsGroup.removeAttribute("aria-invalid");
+    });
+  });
+
+  quickConsent.addEventListener("change", () => {
+    if (!quickConsent.checked) return;
+    quickConsentError.hidden = true;
+    quickConsent.removeAttribute("aria-invalid");
+  });
+
+  quickFeedbackForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const hasInterest = Boolean(quickFeedbackForm.querySelector('[name="frage_2_interessen"]:checked'));
+    quickInterestsError.hidden = hasInterest;
+    quickInterestsGroup.toggleAttribute("aria-invalid", !hasInterest);
+    if (!hasInterest) {
+      const firstInterest = quickFeedbackForm.querySelector('[name="frage_2_interessen"]');
+      quickInterestsGroup.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "center" });
+      firstInterest.focus({ preventScroll: true });
+      return;
+    }
+
+    if (!quickConsent.checked) {
+      quickConsentError.hidden = false;
+      quickConsent.setAttribute("aria-invalid", "true");
+      quickConsent.closest(".consent").scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "center" });
+      quickConsent.focus({ preventScroll: true });
+      return;
+    }
+
+    if (!quickFeedbackForm.reportValidity()) return;
+
+    const submitButton = quickFeedbackForm.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton.textContent;
+    const followAnswer = quickFeedbackForm.querySelector('[name="frage_3_weiterverfolgen"]:checked')?.value;
+    const wantsUpdates = followAnswer === "Ja, gerne";
+    const email = quickEmail.value.trim();
+    submitButton.disabled = true;
+    submitButton.textContent = "Wird gesendet …";
+    quickSubmitStatus.hidden = true;
+
+    try {
+      const response = await fetch(quickFeedbackEndpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(quickFeedbackPayload()),
+      });
+      if (!response.ok) throw new Error(`Formspark antwortete mit Status ${response.status}`);
+
+      if (wantsUpdates) await submitBrevoDoubleOptIn(email);
+
+      quickFeedbackForm.reset();
+      updateQuickEmailPanel();
+      quickHeading.hidden = true;
+      quickFeedbackForm.hidden = true;
+      quickSuccess.hidden = false;
+      quickSuccess.focus({ preventScroll: true });
+      quickSuccess.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "center" });
+    } catch (error) {
+      console.error("Die kurze Rückmeldung konnte nicht vollständig übermittelt werden.", error);
+      quickSubmitStatus.textContent = "Die Übermittlung hat leider nicht funktioniert. Bitte versuchen Sie es erneut. Ihre Eingaben bleiben erhalten.";
+      quickSubmitStatus.classList.add("error");
+      quickSubmitStatus.hidden = false;
+      quickSubmitStatus.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = originalButtonText;
+    }
+  });
+
+  updateQuickEmailPanel();
+}

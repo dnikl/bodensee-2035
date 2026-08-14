@@ -7,9 +7,9 @@
     <title>Bodensee 2035 | Elektrifizierung</title>
     <link rel="canonical" href="https://bodensee-2035.com/" />
     <link rel="icon" href="assets/favicon.svg" />
-    <link rel="stylesheet" href="styles.css?v=newsletter-bereich" />
+    <link rel="stylesheet" href="styles.css?v=kurzfragebogen" />
     <script src="global.js?v=pfeil-mobile-frueher" defer></script>
-    <script src="script.js?v=datenschutz-schritt-1" defer></script>
+    <script src="script.js?v=kurzfragebogen" defer></script>
   </head>
   <body>
     <header class="nav-wrap">
@@ -162,7 +162,72 @@
         <div class="container">
           <p class="kicker"><span class="kicker-leaf-mark" aria-hidden="true"></span> Mitgestalten</p>
           <div class="section-title"><h2>Was braucht der Bodensee<br />von morgen?</h2><p>Wie sieht die Zukunft des Bodensees aus Ihrer Perspektive aus? Wählen Sie den Bereich, der zu Ihnen passt, und bringen Sie Ihre Erfahrungen, Ideen und Erwartungen ein.</p></div>
-          <div class="audience-grid">
+          <div class="quick-feedback" id="meinung">
+            <div class="quick-feedback-heading">
+              <h3>Ihre Meinung zählt.</h3>
+              <p>Drei Fragen zur Zukunft der Bodenseeregion.</p>
+            </div>
+            <form id="quick-feedback-form" novalidate>
+              <div class="formspark-honeypot" aria-hidden="true"><label>Bitte nicht ausfüllen<input type="text" name="_honeypot" tabindex="-1" autocomplete="off" /></label></div>
+
+              <fieldset class="quick-question">
+                <legend><span>01</span>Wie wichtig finden Sie die Weiterentwicklung zu einer nachhaltigeren und stärker vernetzten Bodenseeregion?</legend>
+                <div class="quick-options">
+                  <label><input type="radio" name="frage_1_wichtigkeit" value="Sehr wichtig" required /><span>Sehr wichtig</span></label>
+                  <label><input type="radio" name="frage_1_wichtigkeit" value="Wichtig" /><span>Wichtig</span></label>
+                  <label><input type="radio" name="frage_1_wichtigkeit" value="Eher nicht wichtig" /><span>Eher nicht wichtig</span></label>
+                  <label><input type="radio" name="frage_1_wichtigkeit" value="Kann ich noch nicht beurteilen" /><span>Kann ich noch nicht beurteilen</span></label>
+                </div>
+              </fieldset>
+
+              <fieldset class="quick-question" id="quick-interests-group" aria-describedby="quick-interests-hint quick-interests-error">
+                <legend><span>02</span>Was interessiert Sie dabei besonders?</legend>
+                <p class="quick-hint" id="quick-interests-hint">Mehrfachauswahl möglich</p>
+                <div class="quick-options quick-options-single">
+                  <label><input type="checkbox" name="frage_2_interessen" value="Ladeinfrastruktur am und auf dem Wasser" /><span>Ladeinfrastruktur am und auf dem Wasser</span></label>
+                  <label><input type="checkbox" name="frage_2_interessen" value="Erneuerbare Energie &amp; Energiespeicherung" /><span>Erneuerbare Energie &amp; Energiespeicherung</span></label>
+                  <label><input type="checkbox" name="frage_2_interessen" value="Nachhaltige Mobilität rund um den See" /><span>Nachhaltige Mobilität rund um den See</span></label>
+                  <label><input type="checkbox" name="frage_2_interessen" value="Vernetzung von Gemeinden, Häfen und Unternehmen" /><span>Vernetzung von Gemeinden, Häfen und Unternehmen</span></label>
+                  <label><input type="checkbox" name="frage_2_interessen" value="Ich möchte einfach wissen, wie sich Bodensee 2035 entwickelt" /><span>Ich möchte einfach wissen, wie sich Bodensee 2035 entwickelt</span></label>
+                </div>
+                <p class="quick-field-error" id="quick-interests-error" role="alert" hidden>Bitte wählen Sie mindestens einen Bereich aus.</p>
+              </fieldset>
+
+              <fieldset class="quick-question">
+                <legend><span>03</span>Möchten Sie Bodensee 2035 weiterverfolgen?</legend>
+                <div class="quick-options quick-options-three">
+                  <label><input type="radio" name="frage_3_weiterverfolgen" value="Ja, gerne" required /><span>Ja, gerne</span></label>
+                  <label><input type="radio" name="frage_3_weiterverfolgen" value="Vielleicht später" /><span>Vielleicht später</span></label>
+                  <label><input type="radio" name="frage_3_weiterverfolgen" value="Nein" /><span>Nein</span></label>
+                </div>
+                <div class="quick-email-panel" id="quick-email-panel" aria-hidden="true">
+                  <div>
+                    <label for="quick-email">Ihre E-Mail-Adresse</label>
+                    <input type="email" id="quick-email" autocomplete="email" inputmode="email" placeholder="name@beispiel.ch" disabled />
+                    <p>Wir informieren Sie ungefähr viermal pro Jahr über wichtige Entwicklungen und nächste Schritte. Die Anmeldung kann jederzeit widerrufen werden.</p>
+                  </div>
+                </div>
+              </fieldset>
+
+              <label class="consent quick-consent"><input type="checkbox" name="datenschutz-einwilligung" value="Ja" aria-describedby="quick-consent-provider-note quick-consent-error" /> <span>Ich habe den <a href="datenschutz.html">Hinweis zur Datenverarbeitung</a> gelesen und stimme der Übermittlung meiner Angaben zu.</span></label>
+              <p class="consent-provider-note" id="quick-consent-provider-note">Ihre Antworten werden sicher an Formspark übermittelt. Nur bei „Ja, gerne“ wird die angegebene E-Mail-Adresse über Brevo in den bestehenden Double-Opt-in-Prozess übergeben.</p>
+              <p class="consent-error" id="quick-consent-error" role="alert" hidden>Fast geschafft – bitte noch kurz den Datenschutzhinweis bestätigen.</p>
+              <button class="button quick-submit" type="submit">Meinung senden</button>
+              <p class="quick-submit-status" id="quick-submit-status" role="status" hidden></p>
+            </form>
+
+            <div class="quick-feedback-success" id="quick-feedback-success" tabindex="-1" hidden>
+              <h3>Vielen Dank für Ihre Rückmeldung.</h3>
+              <p>Ihre Meinung hilft uns, Bodensee 2035 Schritt für Schritt weiterzuentwickeln.</p>
+              <div>
+                <h4>Sie möchten mehr mitgestalten?</h4>
+                <p>Dann freuen wir uns über Ihre Meinung in einem unserer ausführlichen Fragebögen.</p>
+                <a class="button" href="#ausfuehrliche-frageboegen">Ausführliche Fragebögen entdecken</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="audience-grid" id="ausfuehrliche-frageboegen">
             <button type="button" data-survey="gemeinde"><span class="audience-icon"><img src="assets/icons/Regierungsgebaeude_Kreis_feine_Linien.png" alt="" /></span><h3>Gemeinde oder Hafen</h3><p>Standortpotenziale prüfen und regionale Entwicklung anstossen.</p><b>Zum Fragebogen</b></button>
             <button type="button" data-survey="werft"><span class="audience-icon"><img src="assets/icons/Werft_Boot.png" alt="" /></span><h3>Werft oder Unternehmen</h3><p>Fachwissen, Technik und Ressourcen in das Netzwerk einbringen.</p><b>Zum Fragebogen</b></button>
             <button type="button" data-survey="boot"><span class="audience-icon"><img src="assets/icons/07-elektroboot-mit-blitz.png" alt="" /></span><h3>Bootsbesitzer:in</h3><p>Bedürfnisse und Erwartungen an ein künftiges Ladenetz teilen.</p><b>Zum Fragebogen</b></button>
