@@ -1385,12 +1385,15 @@ body { overflow-x:hidden; }
 
 /* Grosszuegiges Raster fuer die vier ausfuehrlichen Frageboegen. */
 .participate .audience-grid {
+  width:min(1080px,100%);
   grid-template-columns:repeat(2,minmax(0,1fr));
   gap:32px;
+  margin-left:auto;
+  margin-right:auto;
 }
 .participate .audience-grid button {
   grid-template-rows:62px auto minmax(0,1fr) auto;
-  min-height:0;
+  min-height:330px;
   border:1px solid var(--line);
   padding:35px;
   row-gap:18px;
