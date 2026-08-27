@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="14 14 72 72" role="img" aria-label="Sonne, Windrad und Wellen als Symbol für erneuerbare Energie">
-  <g fill="none" stroke="#ffffff" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="28" cy="29" r="8" />
-    <path d="M28 15v6M28 37v6M14 29h6M36 29h6M18.1 19.1l4.2 4.2M33.7 34.7l4.2 4.2M37.9 19.1l-4.2 4.2M22.3 34.7l-4.2 4.2" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="10 10 80 80" role="img" aria-label="Sonne, Windrad und zwei Wellenlinien als Symbol für erneuerbare Energie">
+  <g fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="27" cy="28" r="9" />
+    <path d="M27 14v5M27 37v5M13 28h5M36 28h5M17.1 18.1l3.6 3.6M33.3 34.3l3.6 3.6M36.9 18.1l-3.6 3.6M20.7 34.3l-3.6 3.6" />
 
-    <circle cx="64" cy="38" r="3.5" />
-    <path d="M64 34.5L66.5 15 69 35.5M67.2 39.5L85 48 68 43M61.5 40.5L45 53 60.5 36.5" />
-    <path d="M62.5 41.5L60.5 68M65.5 41.5L67.5 68M48 69.5c11-3.2 24-3.2 36 1" />
+    <circle cx="61" cy="39" r="3.7" />
+    <path d="M61 35.3L63.5 14 66 36M64.3 40.8L84 49.5 65.5 44.5M58.2 41.3L41.5 54.5 57.5 37" />
+    <path d="M59.8 42.4L58 68M62.2 42.4L64 68" />
 
-    <path d="M14 76c7-4 14-4 21 0s14 4 21 0 14-4 21 0M18 84c6-3.5 12-3.5 18 0s12 3.5 18 0 12-3.5 18 0" />
+    <path d="M15 74c7-4 14-4 21 0s14 4 21 0 14-4 21 0M19 82c6-3.5 12-3.5 18 0s12 3.5 18 0 12-3.5 18 0" />
   </g>
 </svg>
