@@ -1,5 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Sonne, Windrad und Wellen als Symbol für erneuerbare Energie">
-  <circle cx="50" cy="50" r="45" fill="none" stroke="#ffffff" stroke-width="1.8" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="10 10 80 80" role="img" aria-label="Sonne, Windrad und Wellen als Symbol für erneuerbare Energie">
   <g fill="none" stroke="#ffffff" stroke-width="2.15" stroke-linecap="round" stroke-linejoin="round">
     <circle cx="28" cy="29" r="8" />
     <path d="M28 15v6M28 37v6M14 29h6M36 29h6M18.1 19.1l4.2 4.2M33.7 34.7l4.2 4.2M37.9 19.1l-4.2 4.2M22.3 34.7l-4.2 4.2" />

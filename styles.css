@@ -535,7 +535,7 @@ body,.button,input,textarea,select{font-family:Poppins,Arial,sans-serif}.hero h1
   border:0;
   text-align:left;
 }
-.hub-benefits img { width:34px; height:34px; filter:brightness(0) invert(1); opacity:.92; }
+.hub-benefits img { width:40px; height:40px; filter:brightness(0) invert(1); opacity:.92; }
 .hub-benefits img:not(.hub-benefit-leaf) {
   filter: brightness(0) invert(1) drop-shadow(0 0 .8px #fff);
   opacity: 1;
@@ -544,6 +544,10 @@ body,.button,input,textarea,select{font-family:Poppins,Arial,sans-serif}.hero h1
 .hub-benefits img.hub-benefit-leaf {
   object-fit: contain;
   filter: brightness(0) invert(1) drop-shadow(0 0 .8px #fff);
+  opacity: 1;
+}
+.hub-benefits img.hub-benefit-eyebrow-leaf {
+  filter: brightness(0) invert(1);
   opacity: 1;
 }
 .hub-benefits b { color:#fff; font-size:13px; text-transform:none; font-weight:600; }
