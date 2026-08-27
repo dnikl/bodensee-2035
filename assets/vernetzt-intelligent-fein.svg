@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="10 10 80 80" role="img" aria-label="Fünf vernetzte Knotenpunkte als Symbol für intelligente Verbindung">
-  <g fill="none" stroke="#ffffff" stroke-width="2.15" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="50" cy="50" r="7" />
-    <circle cx="27" cy="27" r="6" />
-    <circle cx="73" cy="27" r="6" />
-    <circle cx="73" cy="73" r="6" />
-    <circle cx="27" cy="73" r="6" />
-    <path d="M45 45L31.3 31.3M55 45l13.7-13.7M55 55l13.7 13.7M45 55L31.3 68.7" />
+  <g fill="none" stroke="#ffffff" stroke-width="2.35" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="50" cy="50" r="7.5" />
+    <circle cx="27" cy="27" r="6.5" />
+    <circle cx="73" cy="27" r="6.5" />
+    <circle cx="73" cy="73" r="6.5" />
+    <circle cx="27" cy="73" r="6.5" />
+    <path d="M44.7 44.7L31.6 31.6M55.3 44.7l13.1-13.1M55.3 55.3l13.1 13.1M44.7 55.3L31.6 68.4" />
   </g>
 </svg>
