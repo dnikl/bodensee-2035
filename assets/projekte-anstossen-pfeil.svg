@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="160" height="100" viewBox="0 0 160 100" role="img" aria-label="Partner stossen gemeinsam ein konkretes Projekt an">
   <g fill="none" stroke="#062a4d" stroke-width="2.15" stroke-linecap="round" stroke-linejoin="round">
     <!-- Ruhiger organischer Entwicklungsbogen -->
-    <g stroke-width="2.45">
-      <path d="M58 76c30 0 56-12 74-28 7-6.2 13.5-12 19-18"/>
-      <path d="M139 32c4.5-.2 8.2-.9 12-2M151 30c0 4.5.8 8.4 2.5 12"/>
+    <g stroke-width="2.45" transform="translate(58 76) scale(.73) translate(-58 -76)">
+      <path vector-effect="non-scaling-stroke" d="M58 76c30 0 56-12 74-28 7-6.2 13.5-12 19-18"/>
+      <path vector-effect="non-scaling-stroke" d="M139 32c4.5-.2 8.2-.9 12-2M151 30c0 4.5.8 8.4 2.5 12"/>
     </g>
 
     <!-- Partner / Zusammenarbeit: bekannte Dreiergruppe -->
-    <g transform="translate(1 54) scale(.48)">
+    <g transform="translate(1 47) scale(.6)">
       <circle vector-effect="non-scaling-stroke" cx="28" cy="54" r="5.5"/>
       <circle vector-effect="non-scaling-stroke" cx="50" cy="57" r="6.5"/>
       <circle vector-effect="non-scaling-stroke" cx="72" cy="54" r="5.5"/>
@@ -16,8 +16,10 @@
     </g>
 
     <!-- Chance / aufleuchtender Startimpuls -->
-    <path d="M120 10c0 6-3.5 9.5-9.5 9.5 6 0 9.5 3.5 9.5 9.5 0-6 3.5-9.5 9.5-9.5-6 0-9.5-3.5-9.5-9.5z"/>
-    <path d="M107.5 7l-2.5-2.5M132.5 7l2.5-2.5M107.5 32l-2.5 2.5M132.5 32l2.5 2.5"/>
+    <g transform="translate(-14 0) translate(120 20) scale(1.2) translate(-120 -20)">
+      <path vector-effect="non-scaling-stroke" d="M120 10c0 6-3.5 9.5-9.5 9.5 6 0 9.5 3.5 9.5 9.5 0-6 3.5-9.5 9.5-9.5-6 0-9.5-3.5-9.5-9.5z"/>
+      <path vector-effect="non-scaling-stroke" d="M107.5 7l-2.5-2.5M132.5 7l2.5-2.5M107.5 32l-2.5 2.5M132.5 32l2.5 2.5"/>
+    </g>
 
     <!-- Konkrete Umsetzung -->
     <path d="M126 79l9 9 18-21"/>
