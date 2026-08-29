@@ -1,24 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="160" height="100" viewBox="0 0 160 100" role="img" aria-label="Partner stossen gemeinsam ein konkretes Projekt an">
+<svg xmlns="http://www.w3.org/2000/svg" width="140" height="110" viewBox="0 0 140 110" role="img" aria-label="Partner stossen gemeinsam ein konkretes Projekt an">
   <g fill="none" stroke="#062a4d" stroke-width="2.15" stroke-linecap="round" stroke-linejoin="round">
-    <!-- Ruhiger organischer Entwicklungsbogen -->
-    <g stroke-width="2.45" transform="translate(0 5) translate(58 76) scale(.73) translate(-58 -76)">
-      <path vector-effect="non-scaling-stroke" d="M58 76c30 0 56-12 74-28 7-6.2 13.5-12 19-18"/>
-      <path vector-effect="non-scaling-stroke" d="M139 32c4.5-.2 8.2-.9 12-2M151 30c0 4.5.8 8.4 2.5 12"/>
+    <!-- Personengruppe links unten -->
+    <circle cx="16" cy="80" r="6"/>
+    <circle cx="32" cy="77" r="7"/>
+    <circle cx="49" cy="82" r="5.5"/>
+    <path d="M7 103v-9c0-5.5 3.8-9 9-9 4.6 0 8 2.7 9.3 6.4M23 104V94c0-6.5 3.8-11 9-11s11 4.5 11 11v10M43 103v-8.5c0-5.2 2.8-8.5 7.5-8.5 5.2 0 8.5 3.7 8.5 9v8"/>
+
+    <!-- Langer organischer Pfeil nach rechts oben -->
+    <g stroke-width="2.45">
+      <path d="M64 91c19 0 34-7 45-18 9-9 14-18 18-26"/>
+      <path d="M114 50c4.8-.2 9-.9 13-3M127 47c.2 5.8 1.2 11 3 16"/>
     </g>
 
-    <!-- Partner / Zusammenarbeit: bekannte Dreiergruppe -->
-    <g transform="translate(1 47) scale(.6)">
-      <circle vector-effect="non-scaling-stroke" cx="28" cy="54" r="5.5"/>
-      <circle vector-effect="non-scaling-stroke" cx="50" cy="57" r="6.5"/>
-      <circle vector-effect="non-scaling-stroke" cx="72" cy="54" r="5.5"/>
-      <path vector-effect="non-scaling-stroke" d="M14 81V72c0-5 4-9 9-9h5c3 0 5.7 1.5 7.3 3.8M86 81V72c0-5-4-9-9-9h-5c-3 0-5.7 1.5-7.3 3.8"/>
-      <path vector-effect="non-scaling-stroke" d="M34 82V76c0-5 4-9 9-9h14c5 0 9 4 9 9v6"/>
-    </g>
-
-    <!-- Chance / aufleuchtender Startimpuls -->
-    <g transform="translate(-6 0) translate(120 20) scale(1.2) translate(-120 -20)">
-      <path vector-effect="non-scaling-stroke" d="M120 10c0 6-3.5 9.5-9.5 9.5 6 0 9.5 3.5 9.5 9.5 0-6 3.5-9.5 9.5-9.5-6 0-9.5-3.5-9.5-9.5z"/>
-      <path vector-effect="non-scaling-stroke" d="M107.5 7l-2.5-2.5M132.5 7l2.5-2.5M107.5 32l-2.5 2.5M132.5 32l2.5 2.5"/>
-    </g>
+    <!-- Großer Impuls oberhalb links der Pfeilspitze -->
+    <path d="M115 7c0 8-5 13-13 13 8 0 13 5 13 13 0-8 5-13 13-13-8 0-13-5-13-13z"/>
+    <path d="M115 1v3M98 4l3 3M132 4l-3 3M95 20h4M131 20h4M100 36l3-3M130 36l-3-3"/>
   </g>
 </svg>

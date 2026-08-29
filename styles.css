@@ -1100,10 +1100,10 @@ body,.button,input,textarea,select{font-family:Poppins,Arial,sans-serif}.hero h1
   overflow:visible;
 }
 .process .steps article:last-child .step-icon {
-  width:160px;
-  height:100px;
-  flex-basis:100px;
-  margin-bottom:6px;
+  width:140px;
+  height:110px;
+  flex-basis:110px;
+  margin-bottom:-4px;
   overflow:visible;
 }
 .process .steps h3 {
@@ -1153,7 +1153,7 @@ body,.button,input,textarea,select{font-family:Poppins,Arial,sans-serif}.hero h1
   .process .step-icon { margin:0 0 26px; }
   .process .steps article:first-child .step-icon { margin-bottom:4px; }
   .process .steps article:nth-child(2) .step-icon { margin-bottom:4px; }
-  .process .steps article:last-child .step-icon { margin-bottom:4px; }
+  .process .steps article:last-child .step-icon { margin-bottom:-6px; }
   .process .steps h3 { min-height:0; margin-bottom:16px; }
   .current-status { padding:72px 0 68px; }
   .current-status .people-behind { margin-top:72px; }
