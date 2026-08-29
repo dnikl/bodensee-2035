@@ -1085,6 +1085,13 @@ body,.button,input,textarea,select{font-family:Poppins,Arial,sans-serif}.hero h1
   flex:0 0 78px;
   margin:0 0 28px;
 }
+.process .steps article:nth-child(2) .step-icon {
+  width:100px;
+  height:100px;
+  flex-basis:100px;
+  margin-bottom:6px;
+  overflow:visible;
+}
 .process .steps h3 {
   display:flex;
   align-items:flex-start;
@@ -1130,6 +1137,7 @@ body,.button,input,textarea,select{font-family:Poppins,Arial,sans-serif}.hero h1
   }
   .process .steps article:not(:last-child)::after { display:none; }
   .process .step-icon { margin:0 0 26px; }
+  .process .steps article:nth-child(2) .step-icon { margin-bottom:4px; }
   .process .steps h3 { min-height:0; margin-bottom:16px; }
   .current-status { padding:72px 0 68px; }
   .current-status .people-behind { margin-top:72px; }

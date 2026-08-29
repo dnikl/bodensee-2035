@@ -1,23 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="78" height="78" viewBox="0 0 78 78" role="img" aria-label="Eine gemeinsame Idee aus Bodensee, Energie, Technik und Menschen">
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" role="img" aria-label="Eine gemeinsame Idee aus Bodensee, Energie, Technik und Menschen">
   <g fill="none" stroke="#062a4d" stroke-width="2.15" stroke-linecap="round" stroke-linejoin="round">
     <!-- Gemeinsame Idee: zentrale Glühbirne -->
-    <path d="M31 37.5c0-5.2 3.5-9 8-9s8 3.8 8 9c0 3.9-2 6.2-4.8 8.8v3.2h-6.4v-3.2C33 43.7 31 41.4 31 37.5z"/>
-    <path d="M35.8 53h6.4M37.2 56.5h3.6"/>
-    <path d="M39 23.5v-3M28.8 27.7l-2.2-2.2M49.2 27.7l2.2-2.2M26.5 37.5h-3M51.5 37.5h3"/>
+    <path d="M40 48c0-6.5 4.4-11.2 10-11.2S60 41.5 60 48c0 4.9-2.5 7.8-6 11v4H46v-4c-3.5-3.2-6-6.1-6-11z"/>
+    <path d="M46 67.2h8M47.7 71.5h4.6"/>
+    <path d="M50 30.5v-4M36.5 35l-3-3M63.5 35l3-3M34 48h-4M66 48h4"/>
 
     <!-- Sonne / Energie -->
-    <circle cx="13.5" cy="14" r="3.8"/>
-    <path d="M13.5 6.5v2M13.5 19.5v2M6 14h2M19 14h2M8.2 8.7l1.5 1.5M17.3 17.8l1.5 1.5M18.8 8.7l-1.5 1.5M9.7 17.8l-1.5 1.5"/>
+    <circle cx="15" cy="15" r="5"/>
+    <path d="M15 5.5v3M15 21.5v3M5.5 15h3M21.5 15h3M8.3 8.3l2.2 2.2M19.5 19.5l2.2 2.2M21.7 8.3l-2.2 2.2M10.5 19.5l-2.2 2.2"/>
 
     <!-- Stecker / Elektrifizierung -->
-    <path d="M61 8.5v5M67 8.5v5M58.5 13.5h11v4.2c0 3-2.4 5.3-5.5 5.3s-5.5-2.3-5.5-5.3zM64 23v4"/>
+    <path d="M79 7v6M87 7v6M76 13h14v5.5c0 3.8-3.1 6.7-7 6.7s-7-2.9-7-6.7zM83 25.2v5"/>
 
     <!-- Bodensee / Wasser -->
-    <path d="M5.5 61.5c2.3-2 4.6-2 6.9 0s4.6 2 6.9 0 4.6-2 6.9 0M5.5 67c2.3-2 4.6-2 6.9 0s4.6 2 6.9 0 4.6-2 6.9 0"/>
+    <path d="M4.5 80c3-2.6 6-2.6 9 0s6 2.6 9 0 6-2.6 9 0M4.5 87c3-2.6 6-2.6 9 0s6 2.6 9 0 6-2.6 9 0"/>
 
     <!-- Menschen / Perspektiven -->
-    <circle cx="59.5" cy="60" r="3"/>
-    <circle cx="69" cy="60" r="3"/>
-    <path d="M54.5 70v-3.5c0-2.2 1.8-4 4-4h2c1.5 0 2.8.8 3.5 1.9M73.5 70v-3.5c0-2.2-1.8-4-4-4h-1c-1.5 0-2.8.8-3.5 1.9"/>
+    <circle cx="76" cy="78" r="4"/>
+    <circle cx="89" cy="78" r="4"/>
+    <path d="M69.5 92v-4.5c0-3 2.4-5.4 5.4-5.4h2.4c2 0 3.8 1 4.7 2.6M95.5 92v-4.5c0-3-2.4-5.4-5.4-5.4h-1.4c-2 0-3.8 1-4.7 2.6"/>
   </g>
 </svg>
