@@ -1100,15 +1100,14 @@ body,.button,input,textarea,select{font-family:Poppins,Arial,sans-serif}.hero h1
   overflow:visible;
 }
 .process .steps article:last-child .step-icon {
-  width:145px;
-  height:100px;
-  flex-basis:100px;
-  margin-bottom:30px;
+  width:200px;
+  height:150px;
+  flex-basis:150px;
+  margin-bottom:16px;
   overflow:visible;
 }
 .process .steps article:last-child .step-icon img {
-  transform:translateY(-4px) scale(1.18);
-  transform-origin:center bottom;
+  transform:none;
 }
 .process .steps h3 {
   display:flex;
@@ -1157,7 +1156,7 @@ body,.button,input,textarea,select{font-family:Poppins,Arial,sans-serif}.hero h1
   .process .step-icon { margin:0 0 26px; }
   .process .steps article:first-child .step-icon { margin-bottom:4px; }
   .process .steps article:nth-child(2) .step-icon { margin-bottom:4px; }
-  .process .steps article:last-child .step-icon { margin-bottom:28px; }
+  .process .steps article:last-child .step-icon { margin-bottom:16px; }
   .process .steps h3 { min-height:0; margin-bottom:16px; }
   .current-status { padding:72px 0 68px; }
   .current-status .people-behind { margin-top:72px; }

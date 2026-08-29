@@ -1,19 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="145" height="110" viewBox="0 0 145 110" role="img" aria-label="Partner stossen gemeinsam ein konkretes Projekt an">
-  <g fill="none" stroke="#062a4d" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
-    <!-- Drei Menschen: gross, ruhig und als zusammengehörende Gruppe -->
-    <circle cx="15" cy="83" r="6.2"/>
-    <circle cx="34" cy="80.5" r="6.8"/>
-    <circle cx="53" cy="85" r="5.7"/>
-    <path d="M3 108v-8.5c0-6.7 4.5-10.7 11.8-10.7 6.7 0 11.2 4 11.2 10.7V109"/>
-    <path d="M24 109v-10.5c0-7.4 4.2-11.5 10.1-11.5 6.2 0 10.4 4.4 10.4 11.5V109"/>
-    <path d="M43 109v-9c0-6.2 3.8-9.8 9.8-9.8 6.3 0 10.2 3.9 10.2 10.2V108"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="150" viewBox="0 0 200 150" role="img" aria-label="Partner stossen gemeinsam ein konkretes Projekt an">
+  <g fill="none" stroke="#062a4d" stroke-width="3.15" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Drei Menschen links unten, entsprechend der Referenz -->
+    <circle cx="25" cy="109" r="8"/>
+    <circle cx="50" cy="105" r="9"/>
+    <circle cx="75" cy="112" r="7.3"/>
+    <path d="M10 148v-12c0-10 5.8-16 14.8-16 8.8 0 15 6 15 16v12"/>
+    <path d="M37.5 148v-14c0-11 5.2-17.5 12.7-17.5 8 0 13.3 6.5 13.3 17.5v14"/>
+    <path d="M61.5 148v-12c0-9.2 5-14.5 13.2-14.5 8.3 0 13.8 5.7 13.8 15v11.5"/>
 
-    <!-- Ruhiger, organisch ansteigender Pfeil -->
-    <path d="M69 96c18.5-.4 34.5-5.5 45.8-14.4 8.4-6.6 13.1-14.7 15.1-24.8" stroke-width="3.2"/>
-    <path d="M115.6 63.3c5.2-1.1 10-3.2 14.3-6.5 1.6 4.9 2.2 9.6 2.2 14.1" stroke-width="3.2"/>
+    <!-- Langer, ruhiger Bogen mit viel Abstand zur Personengruppe -->
+    <path d="M102 132c25-.5 47-7 61.8-19.6 11.5-9.8 17.5-22.3 19.8-36.8" stroke-width="3.8"/>
+    <path d="M165.2 85.5c7.1-1.8 13.2-5.1 18.4-9.9 2.4 6.7 3.2 13.3 2.9 19.6" stroke-width="3.8"/>
 
-    <!-- Grosser Stern direkt oberhalb der Pfeilspitze -->
-    <path d="M126.5 10.5c-.2 8.6-5.6 14.8-15.3 15.3 9.7.5 15.2 6.7 15.5 16.6.4-9.9 5.7-16.1 15.5-16.5-9.6-.5-15.1-6.6-15.7-15.4z" stroke-width="3"/>
-    <path d="M126.5 0v6.1M103.8 5.8l4.2 4.2M144 6.3l-4.1 4.1M99.5 26h6.2M141.2 26h3.3M109.5 45l4.1-5M140 44.5l-4-5"/>
+    <!-- Grosser Impuls direkt oberhalb der Pfeilspitze -->
+    <path d="M181 13c-.3 12-7.6 20.5-20.5 21.2 13 .7 20.4 9.1 20.8 22.8.5-13.7 7.7-22.1 20.7-22.7-12.8-.7-20.2-9-21-21.3z" stroke-width="3.7"/>
+    <path d="M181 0v7.3M150.5 6.3l5.8 5.7M199 8l-5 5M143 34.5h8M194.5 34.5h5.5M158 59l5.2-6.7M197 58.5l-5.2-6.5" stroke-width="3.15"/>
   </g>
 </svg>
