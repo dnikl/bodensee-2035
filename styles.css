@@ -1093,7 +1093,7 @@ body,.button,input,textarea,select{font-family:Poppins,Arial,sans-serif}.hero h1
   overflow:visible;
 }
 .process .steps article:first-child .step-icon {
-  width:100px;
+  width:140px;
   height:100px;
   flex-basis:100px;
   margin-bottom:6px;
