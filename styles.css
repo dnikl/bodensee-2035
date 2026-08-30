@@ -1466,16 +1466,17 @@ body { overflow-x:hidden; }
   height:48px!important;
 }
 .participate .audience-grid button[data-survey="gemeinde"] .audience-icon {
-  width:112px;
+  width:120px;
   height:62px;
   border-radius:0;
   background:transparent;
   place-items:center start;
 }
 .participate .audience-grid button[data-survey="gemeinde"] .audience-icon img {
-  width:112px!important;
-  height:62px!important;
+  width:120px!important;
+  height:72px!important;
   mix-blend-mode:normal;
+  transform:translateY(-10px);
 }
 .participate .audience-grid h3 {
   font-size:27px;
