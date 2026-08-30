@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112 62" role="img" aria-hidden="true">
+  <g fill="none" stroke="#062a4d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Vereinfachtes Gemeinde-/Rathausensemble -->
+    <path d="M8 46h53"/>
+    <path d="M13 46V25h34v21"/>
+    <path d="M10 25l20-13 20 13"/>
+    <path d="M26 12V7h8v5"/>
+    <path d="M20 46V31h7v15M34 46V31h7v15"/>
+    <path d="M47 46V32h12v14M59 46V36h9v10"/>
+
+    <!-- Kleiner Hafensteg -->
+    <path d="M70 26h30l7 5H70z"/>
+    <path d="M75 31v15M97 31v15M104 32v12"/>
+    <path d="M70 26l8-5h22"/>
+
+    <!-- Bodensee-Wellen -->
+    <path d="M65 49c4-2.5 8-2.5 12 0s8 2.5 12 0 8-2.5 12 0 7 2.5 10 0"/>
+    <path d="M68 55c4-2.5 8-2.5 12 0s8 2.5 12 0 8-2.5 12 0"/>
+  </g>
+</svg>
