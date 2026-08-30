@@ -1479,17 +1479,17 @@ body { overflow-x:hidden; }
   transform:translateY(-10px);
 }
 .participate .audience-grid button[data-survey="werft"] .audience-icon {
-  width:120px;
+  width:165px;
   height:62px;
   border-radius:0;
   background:transparent;
   place-items:center start;
 }
 .participate .audience-grid button[data-survey="werft"] .audience-icon img {
-  width:120px!important;
-  height:72px!important;
+  width:165px!important;
+  height:99px!important;
   mix-blend-mode:normal;
-  transform:translateY(-10px);
+  transform:translateY(-37px);
 }
 .participate .audience-grid h3 {
   font-size:27px;
