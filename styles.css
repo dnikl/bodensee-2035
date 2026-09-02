@@ -1476,7 +1476,7 @@ body { overflow-x:hidden; }
   width:128px!important;
   height:77px!important;
   mix-blend-mode:normal;
-  transform:translateY(-13px);
+  transform:translateY(-11px);
 }
 .participate .audience-grid button[data-survey="werft"] .audience-icon {
   width:165px;
@@ -1502,7 +1502,7 @@ body { overflow-x:hidden; }
   width:150px!important;
   height:77px!important;
   mix-blend-mode:normal;
-  transform:translateY(-19px);
+  transform:translateY(-23px);
 }
 .participate .audience-grid button[data-survey="fan"] .audience-icon {
   width:166px;
@@ -1515,7 +1515,7 @@ body { overflow-x:hidden; }
   width:166px!important;
   height:90px!important;
   mix-blend-mode:normal;
-  transform:translateY(-26px);
+  transform:translateY(-24px);
 }
 .participate .audience-grid h3 {
   font-size:27px;
