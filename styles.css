@@ -1103,13 +1103,13 @@ body,.button,input,textarea,select{font-family:Poppins,Arial,sans-serif}.hero h1
   width:220px;
   height:100px;
   flex-basis:100px;
-  margin:0 0 6px -50px;
+  margin:0 0 6px;
   overflow:visible;
 }
 .process .steps article:last-child .step-icon img {
   width:220px;
   height:auto;
-  transform:translateY(-47px);
+  transform:none;
 }
 .process .steps h3 {
   display:flex;
@@ -1158,7 +1158,7 @@ body,.button,input,textarea,select{font-family:Poppins,Arial,sans-serif}.hero h1
   .process .step-icon { margin:0 0 26px; }
   .process .steps article:first-child .step-icon { margin-bottom:4px; }
   .process .steps article:nth-child(2) .step-icon { margin-bottom:4px; }
-  .process .steps article:last-child .step-icon { margin:0 0 6px -50px; }
+  .process .steps article:last-child .step-icon { margin:0 0 6px; }
   .process .steps h3 { min-height:0; margin-bottom:16px; }
   .current-status { padding:72px 0 68px; }
   .current-status .people-behind { margin-top:72px; }
