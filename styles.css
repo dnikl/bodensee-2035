@@ -1502,7 +1502,7 @@ body { overflow-x:hidden; }
   width:165px!important;
   height:69px!important;
   mix-blend-mode:normal;
-  transform:translateY(-11px);
+  transform:translateY(-7px);
 }
 .participate .audience-grid button[data-survey="fan"] .audience-icon {
   width:158px;
