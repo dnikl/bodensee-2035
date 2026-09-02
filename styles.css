@@ -1511,6 +1511,9 @@ body { overflow-x:hidden; }
   background:transparent;
   place-items:center start;
 }
+.participate .audience-grid button[data-survey="fan"] .audience-icon {
+  display:none!important;
+}
 .participate .audience-grid button[data-survey="fan"] .audience-icon img {
   width:158px!important;
   height:83px!important;
