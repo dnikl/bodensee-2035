@@ -1466,17 +1466,17 @@ body { overflow-x:hidden; }
   height:48px!important;
 }
 .participate .audience-grid button[data-survey="gemeinde"] .audience-icon {
-  width:120px;
+  width:128px;
   height:62px;
   border-radius:0;
   background:transparent;
   place-items:center start;
 }
 .participate .audience-grid button[data-survey="gemeinde"] .audience-icon img {
-  width:120px!important;
-  height:72px!important;
+  width:128px!important;
+  height:77px!important;
   mix-blend-mode:normal;
-  transform:translateY(-10px);
+  transform:translateY(-13px);
 }
 .participate .audience-grid button[data-survey="werft"] .audience-icon {
   width:165px;
@@ -1492,30 +1492,30 @@ body { overflow-x:hidden; }
   transform:translateY(-37px);
 }
 .participate .audience-grid button[data-survey="boot"] .audience-icon {
-  width:165px;
+  width:150px;
   height:62px;
   border-radius:0;
   background:transparent;
   place-items:center start;
 }
 .participate .audience-grid button[data-survey="boot"] .audience-icon img {
-  width:165px!important;
-  height:85px!important;
+  width:150px!important;
+  height:77px!important;
   mix-blend-mode:normal;
-  transform:translateY(-23px);
+  transform:translateY(-19px);
 }
 .participate .audience-grid button[data-survey="fan"] .audience-icon {
-  width:158px;
+  width:166px;
   height:62px;
   border-radius:0;
   background:transparent;
   place-items:center start;
 }
 .participate .audience-grid button[data-survey="fan"] .audience-icon img {
-  width:158px!important;
-  height:86px!important;
+  width:166px!important;
+  height:90px!important;
   mix-blend-mode:normal;
-  transform:translateY(-24px);
+  transform:translateY(-26px);
 }
 .participate .audience-grid h3 {
   font-size:27px;
