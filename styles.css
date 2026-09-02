@@ -1466,17 +1466,17 @@ body { overflow-x:hidden; }
   height:48px!important;
 }
 .participate .audience-grid button[data-survey="gemeinde"] .audience-icon {
-  width:128px;
+  width:158px;
   height:62px;
   border-radius:0;
   background:transparent;
   place-items:center start;
 }
 .participate .audience-grid button[data-survey="gemeinde"] .audience-icon img {
-  width:128px!important;
-  height:77px!important;
+  width:158px!important;
+  height:88px!important;
   mix-blend-mode:normal;
-  transform:translateY(-15px);
+  transform:translateY(-21px);
 }
 .participate .audience-grid button[data-survey="werft"] .audience-icon {
   width:165px;
