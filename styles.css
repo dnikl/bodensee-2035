@@ -1489,7 +1489,7 @@ body { overflow-x:hidden; }
   width:165px!important;
   height:50px!important;
   mix-blend-mode:normal;
-  transform:translateY(-12.5px);
+  transform:translateY(6px);
 }
 .participate .audience-grid button[data-survey="boot"] .audience-icon {
   width:150px;
