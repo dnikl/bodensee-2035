@@ -1505,17 +1505,17 @@ body { overflow-x:hidden; }
   transform:translateY(-15px);
 }
 .participate .audience-grid button[data-survey="fan"] .audience-icon {
-  width:166px;
+  width:158px;
   height:62px;
   border-radius:0;
   background:transparent;
   place-items:center start;
 }
 .participate .audience-grid button[data-survey="fan"] .audience-icon img {
-  width:166px!important;
-  height:90px!important;
+  width:158px!important;
+  height:93px!important;
   mix-blend-mode:normal;
-  transform:translateY(-28px);
+  transform:translateY(-30px);
 }
 .participate .audience-grid h3 {
   font-size:27px;
