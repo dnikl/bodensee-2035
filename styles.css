@@ -1491,6 +1491,19 @@ body { overflow-x:hidden; }
   mix-blend-mode:normal;
   transform:translateY(-37px);
 }
+.participate .audience-grid button[data-survey="boot"] .audience-icon {
+  width:165px;
+  height:62px;
+  border-radius:0;
+  background:transparent;
+  place-items:center start;
+}
+.participate .audience-grid button[data-survey="boot"] .audience-icon img {
+  width:165px!important;
+  height:85px!important;
+  mix-blend-mode:normal;
+  transform:translateY(-23px);
+}
 .participate .audience-grid h3 {
   font-size:27px;
 }
