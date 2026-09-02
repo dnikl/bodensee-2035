@@ -1476,7 +1476,7 @@ body { overflow-x:hidden; }
   width:158px!important;
   height:88px!important;
   mix-blend-mode:normal;
-  transform:translateY(-21px);
+  transform:translateY(-26px);
 }
 .participate .audience-grid button[data-survey="werft"] .audience-icon {
   width:165px;
