@@ -1513,9 +1513,9 @@ body { overflow-x:hidden; }
 }
 .participate .audience-grid button[data-survey="fan"] .audience-icon img {
   width:158px!important;
-  height:77px!important;
+  height:68.5px!important;
   mix-blend-mode:normal;
-  transform:translateY(-15px);
+  transform:translateY(-10.75px);
 }
 .participate .audience-grid h3 {
   font-size:27px;
