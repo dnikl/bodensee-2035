@@ -1923,3 +1923,33 @@ body { overflow-x:hidden; }
     transform:none;
   }
 }
+
+/* Trennlinien nur auf den eigentlichen Karten, nie auf inneren Textgruppen. */
+.hero-facts .hero-fact-copy {
+  border-right:0;
+  border-bottom:0;
+}
+.hub-scene .hub-benefits > span > span {
+  padding:0;
+  border:0;
+}
+
+@media(max-width:620px) {
+  .hub-benefits { row-gap:0; }
+  .hub-scene .hub-benefits > span {
+    min-height:116px;
+    padding:16px 10px;
+    border:0;
+  }
+  .hub-scene .hub-benefits > span:nth-child(odd) {
+    border-right:1px solid rgba(255,255,255,.2);
+  }
+  .hub-scene .hub-benefits > span:nth-child(-n+2) {
+    border-bottom:1px solid rgba(255,255,255,.2);
+  }
+  .hub-scene .hub-benefits > span > span {
+    min-height:0;
+    padding:0;
+    border:0!important;
+  }
+}
