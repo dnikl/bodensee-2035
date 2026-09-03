@@ -543,7 +543,7 @@ body,.button,input,textarea,select{font-family:Poppins,Arial,sans-serif}.hero h1
 .hub-benefits img.hub-benefit-bold { filter: none; }
 .hub-benefits > span:nth-child(3) img {
   width:auto;
-  height:56px;
+  height:62px;
 }
 .hub-benefits img.hub-benefit-leaf {
   object-fit: contain;
