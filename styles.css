@@ -598,7 +598,7 @@ body,.button,input,textarea,select{font-family:Poppins,Arial,sans-serif}.hero h1
 }
 .hub-benefits > span:nth-child(4) img {
   width:auto;
-  height:56px;
+  height:66px;
 }
 .hub-benefits img.hub-benefit-leaf {
   object-fit: contain;
@@ -1867,7 +1867,7 @@ body { overflow-x:hidden; }
     height:52px;
     transform:none;
   }
-  .hub-benefits > span:nth-child(4) img { height:48px; }
+  .hub-benefits > span:nth-child(4) img { height:56px; }
   .hub-benefits b { font-size:12px; }
   .hub-benefits small { font-size:10.5px; }
 
