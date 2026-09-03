@@ -1749,8 +1749,8 @@ body { overflow-x:hidden; }
 .scroll-top {
   position:fixed;
   z-index:50;
-  right:clamp(18px,2.5vw,38px);
-  bottom:max(22px,env(safe-area-inset-bottom));
+  right:18px;
+  bottom:max(18px,env(safe-area-inset-bottom));
   width:52px;
   height:52px;
   padding:0;
@@ -1775,7 +1775,7 @@ body { overflow-x:hidden; }
   display:block;
   width:38px;
   height:52px;
-  transform:translate(-50%,-50%) scale(1.45);
+  transform:translate(-50%,-50%) scale(1.1);
   overflow:visible;
 }
 .scroll-top-head-main {
@@ -1798,13 +1798,14 @@ body { overflow-x:hidden; }
 }
 .scroll-top:focus-visible { outline-offset:-3px; }
 
-@media(max-width:620px) {
+@media(max-width:768px) {
   .scroll-top {
-    right:10px;
-    bottom:max(24px,calc(env(safe-area-inset-bottom) + 10px));
+    right:12px;
+    bottom:max(14px,calc(env(safe-area-inset-bottom) + 10px));
     width:48px;
     height:48px;
   }
+  .scroll-top-mark { transform:translate(-50%,-50%) scale(.96); }
   .scroll-top-line { stroke-width:1.55; }
   .scroll-top-head-light { stroke-width:1.2; }
 }
