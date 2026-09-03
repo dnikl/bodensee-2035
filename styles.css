@@ -446,6 +446,26 @@ body,.button,input,textarea,select{font-family:Poppins,Arial,sans-serif}.hero h1
   align-self: center;
   margin: 0;
 }
+.hero-facts > .hero-fact-locations {
+  flex-direction:column;
+  justify-content:center;
+  gap:9px;
+  padding:12px 20px 10px;
+}
+.hero-fact-locations > img {
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:112px;
+  object-fit:contain;
+}
+.hero-fact-copy {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  width:100%;
+}
 .button { border-radius: 16px; font-weight: 600; }
 .button:hover { background: #0b2446; }
 .actions { gap: 38px; }
