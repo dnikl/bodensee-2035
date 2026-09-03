@@ -541,6 +541,10 @@ body,.button,input,textarea,select{font-family:Poppins,Arial,sans-serif}.hero h1
   opacity: 1;
 }
 .hub-benefits img.hub-benefit-bold { filter: none; }
+.hub-benefits > span:nth-child(3) img {
+  width:56px;
+  height:auto;
+}
 .hub-benefits img.hub-benefit-leaf {
   object-fit: contain;
   filter: brightness(0) invert(1) drop-shadow(0 0 .8px #fff);
