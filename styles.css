@@ -382,6 +382,123 @@ body,.button,input,textarea,select{font-family:Poppins,Arial,sans-serif}.hero h1
   .closing-image-button { min-width:96px; padding:7px 12px; border-radius:9px; font-size:10px; }
 }
 
+/* Gemeinsame Achse fuer die drei illustrierten Kennzahlen. */
+.hero .hero-kicker {
+  font-size:13.5px;
+  font-weight:600;
+}
+.hero .hero-kicker > .kicker-leaf-mark {
+  width:75px;
+  height:27px;
+  flex-basis:75px;
+}
+.hero .hero-kicker > .kicker-leaf-mark::after {
+  width:28px;
+  height:28px;
+}
+
+.hero-facts {
+  height:158px;
+}
+.hero-facts > .stat-item {
+  --stat-number-width:52px;
+  --stat-label-width:125px;
+  --stat-illustration-height:76px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) var(--stat-number-width) var(--stat-label-width) minmax(0,1fr);
+  grid-template-rows:82px auto;
+  column-gap:8px;
+  row-gap:18px;
+  align-items:center;
+  justify-content:stretch;
+  padding:10px 20px 8px;
+}
+.hero-facts > .hero-fact-countries { --stat-illustration-height:82px; }
+.hero-facts > .hero-fact-goal { --stat-illustration-height:72px; }
+.hero-facts > .stat-item > .stat-illustration {
+  grid-column:2;
+  grid-row:1;
+  align-self:end;
+  justify-self:center;
+  width:auto;
+  height:var(--stat-illustration-height);
+  max-width:none;
+  max-height:none;
+  object-fit:contain;
+}
+.hero-facts > .stat-item > .stat-meta {
+  grid-column:2 / 4;
+  grid-row:2;
+  display:grid;
+  grid-template-columns:var(--stat-number-width) var(--stat-label-width);
+  column-gap:8px;
+  align-items:center;
+  justify-content:start;
+  width:auto;
+  border:0;
+}
+.hero-facts .stat-number {
+  width:var(--stat-number-width);
+  min-width:0;
+  text-align:center;
+}
+.hero-facts .stat-label {
+  width:auto;
+  max-width:var(--stat-label-width);
+}
+
+@media(min-width:621px) and (max-width:900px) {
+  .hero-facts { height:148px; }
+  .hero-facts > .stat-item {
+    --stat-number-width:44px;
+    --stat-label-width:92px;
+    --stat-illustration-height:68px;
+    grid-template-rows:74px auto;
+    row-gap:15px;
+    padding-inline:8px;
+  }
+  .hero-facts > .hero-fact-countries { --stat-illustration-height:74px; }
+  .hero-facts > .hero-fact-goal { --stat-illustration-height:65px; }
+  .hero-facts .stat-number { font-size:28px; }
+  .hero-facts .stat-label { font-size:9px; }
+}
+
+@media(max-width:620px) {
+  .hero .hero-kicker { font-size:13px; }
+  .hero .hero-kicker > .kicker-leaf-mark {
+    width:72px;
+    height:26px;
+    flex-basis:72px;
+  }
+  .hero .hero-kicker > .kicker-leaf-mark::after {
+    width:27px;
+    height:27px;
+  }
+  .hero-facts { height:auto; }
+  .hero-facts > .stat-item {
+    --stat-number-width:42px;
+    --stat-label-width:145px;
+    --stat-illustration-height:88px;
+    grid-template-columns:var(--stat-number-width) minmax(0,var(--stat-label-width));
+    grid-template-rows:94px auto;
+    column-gap:8px;
+    row-gap:16px;
+    justify-content:center;
+    min-height:176px;
+    padding:18px 12px 16px;
+  }
+  .hero-facts > .hero-fact-countries { --stat-illustration-height:94px; }
+  .hero-facts > .hero-fact-goal { --stat-illustration-height:84px; }
+  .hero-facts > .stat-item > .stat-illustration {
+    grid-column:1;
+    max-width:72vw;
+  }
+  .hero-facts > .stat-item > .stat-meta {
+    grid-column:1 / 3;
+    grid-template-columns:var(--stat-number-width) minmax(0,var(--stat-label-width));
+  }
+}
+
 @media (min-width:621px) and (max-height:679px) {
   .closing.closing-image { height:auto; min-height:0; }
   .closing-image > img { width:100%; height:auto; object-fit:initial; }
@@ -1952,5 +2069,92 @@ body { overflow-x:hidden; }
     min-height:0;
     padding:0;
     border:0!important;
+  }
+}
+
+/* Finale Kennzahlen-Regeln nach allen frueheren Responsive-Anpassungen. */
+.hero .hero-kicker { font-size:13.5px; font-weight:600; }
+.hero .hero-kicker > .kicker-leaf-mark { width:75px; height:27px; flex-basis:75px; }
+.hero .hero-kicker > .kicker-leaf-mark::after { width:28px; height:28px; }
+.hero-facts { height:158px; }
+.hero-facts > .stat-item {
+  --stat-number-width:52px;
+  --stat-label-width:125px;
+  --stat-illustration-height:76px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) var(--stat-number-width) var(--stat-label-width) minmax(0,1fr);
+  grid-template-rows:82px auto;
+  column-gap:8px;
+  row-gap:18px;
+  align-items:center;
+  justify-content:stretch;
+  padding:10px 20px 8px;
+}
+.hero-facts > .hero-fact-countries { --stat-illustration-height:82px; }
+.hero-facts > .hero-fact-goal { --stat-illustration-height:72px; }
+.hero-facts > .stat-item > .stat-illustration {
+  grid-column:2;
+  grid-row:1;
+  align-self:end;
+  justify-self:center;
+  width:auto;
+  height:var(--stat-illustration-height);
+  max-width:none;
+  max-height:none;
+  object-fit:contain;
+}
+.hero-facts > .stat-item > .stat-meta {
+  grid-column:2 / 4;
+  grid-row:2;
+  display:grid;
+  grid-template-columns:var(--stat-number-width) var(--stat-label-width);
+  column-gap:8px;
+  align-items:center;
+  justify-content:start;
+  width:auto;
+  border:0;
+}
+.hero-facts .stat-number { width:var(--stat-number-width); min-width:0; text-align:center; }
+.hero-facts .stat-label { width:auto; max-width:var(--stat-label-width); }
+
+@media(min-width:621px) and (max-width:900px) {
+  .hero-facts { height:148px; }
+  .hero-facts > .stat-item {
+    --stat-number-width:44px;
+    --stat-label-width:92px;
+    --stat-illustration-height:68px;
+    grid-template-rows:74px auto;
+    row-gap:15px;
+    padding-inline:8px;
+  }
+  .hero-facts > .hero-fact-countries { --stat-illustration-height:74px; }
+  .hero-facts > .hero-fact-goal { --stat-illustration-height:65px; }
+  .hero-facts .stat-number { font-size:28px; }
+  .hero-facts .stat-label { font-size:9px; }
+}
+
+@media(max-width:620px) {
+  .hero .hero-kicker { font-size:13px; }
+  .hero .hero-kicker > .kicker-leaf-mark { width:72px; height:26px; flex-basis:72px; }
+  .hero .hero-kicker > .kicker-leaf-mark::after { width:27px; height:27px; }
+  .hero-facts { height:auto; }
+  .hero-facts > .stat-item {
+    --stat-number-width:42px;
+    --stat-label-width:145px;
+    --stat-illustration-height:88px;
+    grid-template-columns:var(--stat-number-width) minmax(0,var(--stat-label-width));
+    grid-template-rows:94px auto;
+    column-gap:8px;
+    row-gap:16px;
+    justify-content:center;
+    min-height:176px;
+    padding:18px 12px 16px;
+  }
+  .hero-facts > .hero-fact-countries { --stat-illustration-height:94px; }
+  .hero-facts > .hero-fact-goal { --stat-illustration-height:84px; }
+  .hero-facts > .stat-item > .stat-illustration { grid-column:1; max-width:72vw; }
+  .hero-facts > .stat-item > .stat-meta {
+    grid-column:1 / 3;
+    grid-template-columns:var(--stat-number-width) minmax(0,var(--stat-label-width));
   }
 }
