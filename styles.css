@@ -446,13 +446,15 @@ body,.button,input,textarea,select{font-family:Poppins,Arial,sans-serif}.hero h1
   align-self: center;
   margin: 0;
 }
-.hero-facts > .hero-fact-locations {
+.hero-facts > .hero-fact-locations,
+.hero-facts > .hero-fact-countries {
   flex-direction:column;
   justify-content:center;
   gap:9px;
   padding:12px 20px 10px;
 }
-.hero-fact-locations > img {
+.hero-fact-locations > img,
+.hero-fact-countries > img {
   display:block;
   width:auto;
   height:auto;
