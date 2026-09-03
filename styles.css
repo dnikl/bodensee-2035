@@ -548,7 +548,7 @@ body,.button,input,textarea,select{font-family:Poppins,Arial,sans-serif}.hero h1
 .hub-benefits > span:nth-child(3) img {
   width:auto;
   height:62px;
-  transform:translateX(-8px);
+  transform:translateX(-16px);
 }
 .hub-benefits > span:nth-child(4) img {
   width:auto;
