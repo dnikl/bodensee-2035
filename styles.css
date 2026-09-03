@@ -1095,7 +1095,7 @@ body,.button,input,textarea,select{font-family:Poppins,Arial,sans-serif}.hero h1
 .process .steps article:nth-child(2) .step-icon img {
   width:240px;
   height:auto;
-  transform:translateY(1px);
+  transform:translate(-10px,1px);
 }
 .process .steps article:first-child .step-icon {
   width:220px;
