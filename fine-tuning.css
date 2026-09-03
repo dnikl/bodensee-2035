@@ -1,0 +1,39 @@
+/* Ausschliesslich die freigegebenen Achsenkorrekturen. */
+.hero-facts > .stat-item {
+  --illustration-offset-x: 0px;
+}
+
+.hero-facts > .stat-item > .stat-illustration {
+  transform: translateX(var(--illustration-offset-x));
+}
+
+@media (min-width: 621px) {
+  .hero-facts > .hero-fact-countries {
+    --illustration-offset-x: 3px;
+  }
+}
+
+@media (max-width: 620px) {
+  .hero-facts > .hero-fact-countries {
+    --illustration-offset-x: 0px;
+  }
+
+  .hub-scene .hub-benefits > span {
+    display: grid;
+    grid-template-columns: minmax(76px, 44%) minmax(0, 1fr);
+    column-gap: 8px;
+    align-items: center;
+  }
+
+  .hub-scene .hub-benefits > span > img {
+    justify-self: center;
+    width: 100%;
+    max-width: 105px;
+    height: auto !important;
+  }
+
+  .hub-scene .hub-benefits > span > span {
+    align-self: center;
+    width: 100%;
+  }
+}
