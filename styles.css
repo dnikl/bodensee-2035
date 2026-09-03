@@ -1086,16 +1086,16 @@ body,.button,input,textarea,select{font-family:Poppins,Arial,sans-serif}.hero h1
   margin:0 0 28px;
 }
 .process .steps article:nth-child(2) .step-icon {
-  width:220px;
+  width:240px;
   height:100px;
   flex-basis:100px;
   margin-bottom:6px;
   overflow:visible;
 }
 .process .steps article:nth-child(2) .step-icon img {
-  width:220px;
+  width:240px;
   height:auto;
-  transform:translateY(5px);
+  transform:translateY(1px);
 }
 .process .steps article:first-child .step-icon {
   width:220px;
