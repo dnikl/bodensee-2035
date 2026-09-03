@@ -584,7 +584,7 @@ body,.button,input,textarea,select{font-family:Poppins,Arial,sans-serif}.hero h1
 .hub-benefits img.hub-benefit-bold { filter: none; }
 .hub-benefits > span:nth-child(1) img {
   width:auto;
-  height:70px;
+  height:91px;
   filter:drop-shadow(0 0 .22px rgba(255,255,255,.75));
 }
 .hub-benefits > span:nth-child(2) img {
@@ -1861,7 +1861,7 @@ body { overflow-x:hidden; }
     justify-content:flex-start;
     padding:12px 6px 0;
   }
-  .hub-benefits > span:nth-child(1) img { height:60px; }
+  .hub-benefits > span:nth-child(1) img { height:78px; }
   .hub-benefits > span:nth-child(2) img { height:48px; }
   .hub-benefits > span:nth-child(3) img {
     height:60px;
